@@ -1,0 +1,2 @@
+class FirstaidkitSpecialistsController < ApplicationController
+end
