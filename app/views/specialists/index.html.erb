@@ -1,0 +1,30 @@
+<div class="card-specialist">
+    <% @specialists.each do |specialist| %>
+     <div class="box">
+        <div class="img">
+          <% if specialist.picture.attached?%>
+              <%= cl_image_tag specialist.picture.key %>
+            <% else %>
+              <img src="https://cdn.icon-icons.com/icons2/1769/PNG/512/4092564-about-mobile-ui-profile-ui-user-website_114033.png">
+          <% end %>
+        </div>
+        <h2>
+          <%= specialist.first_name specialist.last_name %>
+          <br>
+          <%= specialist.phonenumber specialist.email %>
+        </h2>
+        <p><%= specialist.address %></p>
+        <span class="flex-column align-items-center">
+            <ul class='d-flex'>
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            </ul>
+            <div class='d-flex'>
+              <%= link_to "More", specialist_path(specialist)%>
+              <%= link_to "Delete", specialist_path(specialist), method: "delete", data: { confirm: "Are you sure?" }%>
+            </div>
+        </span>
+      </div>
+     <% end %>
+</div>
