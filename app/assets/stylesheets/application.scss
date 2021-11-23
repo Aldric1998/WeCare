@@ -16,6 +16,7 @@
 
 body {
   background-color: #F5F5F5;
+  min-height: 100vh;
 }
 
 .navbar-lewagon {
@@ -36,12 +37,15 @@ body {
 .footer {
   background: #18233A;
   display: flex;
+  position: absolute;
+  bottom: 0;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: 60px;
   padding: 0px 25px;
   font-size: 8px;
   color: #D7DEDC;
+  width: 100%;
 }
 .footer-links {
   display: flex;
