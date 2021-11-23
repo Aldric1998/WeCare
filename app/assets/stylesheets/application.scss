@@ -11,3 +11,52 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+@import "answers/index";
+
+body {
+  background-color: #F5F5F5;
+}
+
+.navbar-lewagon {
+  justify-content: space-between;
+  background: #18233A;
+}
+.white-link {
+  color: #D7DEDC !important;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+}
+.footer {
+  background: #18233A;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0px 25px;
+  font-size: 8px;
+  color: #D7DEDC;
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: #D7DEDC;
+  opacity: 0.5;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 0px 5px;
+}
+.footer-links a:hover {
+  opacity: 1;
+}
+.footer .fa-heart {
+  color: #D23333;
+}
