@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   resources :specialists, only: %i[index show new create destroy] do
     resources :consultations, only: %i[new create destroy]
   end
+
+  resources :statements, only: %i[index]
 end
