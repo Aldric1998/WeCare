@@ -1,0 +1,19 @@
+<div class ="full-container">
+  <h1>Create a Profile - Specialist </h1>
+
+  <div class ="container">
+    <div class="form">
+      <%= simple_form_for(@specialist) do |f| %>
+
+        <%= f.input :first_name %>
+        <%= f.input :last_name %>
+        <%= f.association :speciality, label_method :name %>
+        <%= f.input :email %>
+        <%= f.input :address %>
+        <%= f.input :phonenumber %>
+        <%= f.input :picture, as: :file %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>

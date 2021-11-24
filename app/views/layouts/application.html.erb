@@ -12,6 +12,48 @@
   </head>
 
   <body>
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+      <a class="navbar-brand" href="#">
+        <i class="fas fa-gavel white-link"> <strong>We Care</strong></i>
+    </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <%# <span class="navbar-toggler-icon"></span> %>
+        <i class="fas fa-bars white-link"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link white-link" href="#">Find an answer to your problem</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link white-link" href="#">Find a specialist in your area</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link white-link" href="#">Find fora</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link white-link" href="#">About us</a>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Login", new_user_session_path, class: "nav-link white-link" %>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <%= yield %>
+    <%= render 'shared/flashes' %>
+    <div class="footer">
+      <div class="footer-links">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <div class="footer-copyright">
+        This footer is made with <i class="fas fa-heart"></i> by WeCare
+      </div>
+    </div>
   </body>
 </html>
