@@ -1,4 +1,14 @@
-<div id="map"
-     style="width: 100vw; height: 40vh;"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+<div class="container">
+  <div class="flexing">
+    <div class="firstaidkit">
+      here will be the firstaidkit
+    </div>
+
+
+    <div id="map"
+      style="width: 100vw; height: 40vh;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+  </div>
+</div>

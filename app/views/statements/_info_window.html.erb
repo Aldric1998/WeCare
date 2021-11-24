@@ -1,6 +1,6 @@
-<h2><%= specialist.last_name %></h2>
-<p><%= specialist.first_name %></p>
-<p><%= specialist.address %></p>
-<p><%= specialist.phonenumber %></p>
-<p><%= specialist.email %></p>
-<button class="m-2"><%= link_to 'Details', specialist_path(specialist.id) %></button>
+<div class="card-cont">
+  <p><strong><%= specialist.last_name %></strong></p>
+  <p><%= specialist.first_name %></p>
+  <p>📍 <%= specialist.address %></p>
+  <button class="text-color-white-button"><%= link_to 'Details', specialist_path(specialist.id) %></button>
+</div>
