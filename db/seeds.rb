@@ -6,11 +6,11 @@ Question.destroy_all
 
 titles = ["psychologist", "social worker", "generalist", "police", "legal expert", "non-profit association", "hospital", "psychiatrist"]
 
-first_names = ["Axel", "Raphael", "Pierre", "Alexandra", "Micheline", "Hubert", "Jean-Claude", "Marjory", "Pauline", "Augustin", "Julie", "Belle", "Marie", "José", "Miranda"]
+first_names = ["Axel", "Raphael", "Pierre", "Alexandra", "Micheline", "Hubert", "Jean-Claude", "Marjory", "Pauline", "Augustin", "Julie", "Belle", "Marie", "José", "Miranda", "Jean", "Lucas", "Josette", "Daphnée", "Romain", "Aldric", "Nicolas", "Marianne", "Diane"]
 
-last_names = ["Dujardin", "Lamotte", "Henry", "Malaca", "Prost", "Descartes", "Dumont", "van der Strike", "Lagaffe", "Montgris", "Boule", "Jameson", "Lamar", "Fenadal", "Morison"]
+last_names = ["Dujardin", "Lamotte", "Henry", "Malaca", "Prost", "Descartes", "Dumont", "van der Strike", "Lagaffe", "Montgris", "Boule", "Jameson", "Lamar", "Fenadal", "Morison", "Dupont", "Laupin", "Chirac", "Bousval", "Paras", "Vyver", "Marchant"]
 
-addresses = ["Rue de Paris 112, 1140 Evere", "Rue Haute 298/A, 1000 Bruxelles", "Bd de l'Abattoir 28, 1000 Bruxelles", "Av. d'Auderghem 170, 1040 Etterbeek", "Rue des Colonies 11, 1000 Bruxelles", "Av. De Fré 206, 1180 Uccle", "Rue Lambert Vandervelde 29, 1170 Watermael-Boitsfort", "Rue des Tritomas 39, 1170 Bruxelles", "Bd Auguste Reyers 67/B12, 1030 Schaerbeek", "Av. de Broqueville 9, 1150 Woluwe-Saint-Pierre", "Rue Lambert Crickx 19, 1070 Anderlecht", "Rue Antoine Gautier 118, 1040 Etterbeek", "Av. Brugmann 307, 1180 Uccle", "Hoogstraat 13, 1930 Zaventem", "Chau. de Gand 517, 1080 Molenbeek-Saint-Jean"]
+addresses = ["Rue de Paris 112, 1140 Evere", "Rue Haute 298/A, 1000 Bruxelles", "Bd de l'Abattoir 28, 1000 Bruxelles", "Av. d'Auderghem 170, 1040 Etterbeek", "Rue des Colonies 11, 1000 Bruxelles", "Av. De Fré 206, 1180 Uccle", "Rue Lambert Vandervelde 29, 1170 Watermael-Boitsfort", "Rue des Tritomas 39, 1170 Bruxelles", "Bd Auguste Reyers 67/B12, 1030 Schaerbeek", "Av. de Broqueville 9, 1150 Woluwe-Saint-Pierre", "Rue Lambert Crickx 19, 1070 Anderlecht", "Rue Antoine Gautier 118, 1040 Etterbeek", "Av. Brugmann 307, 1180 Uccle", "Hoogstraat 13, 1930 Zaventem", "Chau. de Gand 517, 1080 Molenbeek-Saint-Jean","Av. Paul Vanden Thoren 15, 1160 Auderghem"]
 
 phonenumbers = ["+32475089762", "+32477089762", "+32477089761", "+32477089762", "+32477089763", "+32477089764", "+32477089765", "+32477089767", "+32477089768", "+32477089769", "+32477089760", "+32477089712", "+32477089722", "+32477089732", "+32477089742", "+32477089752"]
 
