@@ -11,7 +11,9 @@
         <h2>
           <%= specialist.first_name %> <%= specialist.last_name %>
           <br>
-          <%= specialist.phonenumber %> <%= specialist.email %>
+          <%= specialist.phonenumber %>
+          <br>
+          <%= specialist.email %>
         </h2>
         <p><%= specialist.address %></p>
         <span class="flex-column align-items-center">
@@ -27,4 +29,9 @@
         </span>
       </div>
      <% end %>
+     <div id="map"
+      style="width: 100vw; height: 40vh;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
 </div>

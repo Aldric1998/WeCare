@@ -1,0 +1,6 @@
+<div class="card-cont">
+  <p><strong><%= specialist.last_name %></strong></p>
+  <p><%= specialist.first_name %></p>
+  <p>📍 <%= specialist.address %></p>
+  <button class="text-color-white-button"><%= link_to 'Details', specialist_path(specialist.id) %></button>
+</div>

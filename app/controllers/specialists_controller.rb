@@ -13,6 +13,14 @@ class SpecialistsController < ApplicationController
     else
       @specialists = Specialist.all
     end
+
+    @markers = @specialists.geocoded.map do |specialist|
+      {
+        lat: specialist.latitude,
+        lng: specialist.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { specialist: specialist })
+      }
+    end
   end
 
   def new
@@ -30,6 +38,7 @@ class SpecialistsController < ApplicationController
   def show
     @specialist = Specialist.find(params[:id])
     @consultations = @specialist.consultations.where(user: current_user)
+    @consultation = Consultation.new
   end
 
   def destroy
