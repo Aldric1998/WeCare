@@ -30,17 +30,15 @@ body {
 
 .text-image {
   margin: 25px 25px;
-  text-align: justify;
+  text-align: center;
 }
 
 .image-show {
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   text-align: center;
-  display: flex;
   background-color: #e5ece5;
   border-radius: 6px;
   img{
-    object-position: bottom;
     border-radius: 5px;
   }
 }

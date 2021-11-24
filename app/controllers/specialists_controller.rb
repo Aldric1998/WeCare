@@ -30,6 +30,7 @@ class SpecialistsController < ApplicationController
   def show
     @specialist = Specialist.find(params[:id])
     @consultations = @specialist.consultations.where(user: current_user)
+    @consultation = Consultation.new
   end
 
   def destroy
