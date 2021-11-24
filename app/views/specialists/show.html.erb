@@ -4,42 +4,31 @@
     <div class="image-show">
       <% if @specialist.picture.attached?%>
         <%= cl_image_tag @specialist.picture.key, height: 300, width: 400, crop: :fill %>
+        <% else %>
+            <img src="https://cdn.icon-icons.com/icons2/1769/PNG/512/4092564-about-mobile-ui-profile-ui-user-website_114033.png">
       <%end%>
       <hr>
       <div class="text-image">
         <div id="welcome">
-          <h2><strong> Full name: <%= @specialist.first_name %> <%= @specialist.last_name %></strong></h1>
+          <h2><strong> <%= @specialist.first_name %> <%= @specialist.last_name %></strong></h1>
         </div>
-        <h2 class="Contact-card"> Contact: <%= @specialist.email %> <%= @specialist.phonenumber %></h2>
-        <p> Area: <%= @specialist.address %></p>
+        <h2 class="Contact-caard"> Contact: <%= @specialist.email %> <%= @specialist.phonenumber %></h2>
+        <p> Location: <%= @specialist.address %></p>
       </div>
       <hr>
     </div>
 
 
-    <div class="container">
+    <div class="contaner">
     <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
       <h2>Place a booking</h2>
 
       <%= simple_form_for [ @specialist, @consultation ] do |f| %>
-        <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker"} %>
-        <%= f.input :ends_at, as: :string, required: false, input_html: {class: "datepicker"} %>
-        <%= f.input :message %>
-        <%= f.button :submit, "Go", class: "btn btn-primary" %>
+        <%= f.input :start_time, as: :string, required: false, input_html: {class: "datepicker"} %>
+        <%= f.input :end_time, as: :string, required: false, input_html: {class: "datepicker"} %>
+        <%= f.button :submit, "Submit", class: "btn btn-primary blue-btn" %>
       <% end %>
     </div>
   </div>
-
-    <p> <strong>These are the existing consultations : </strong><% @specialist.consultations.each do |consultation| %></p>
-      <p> <u>From:</u> <%= consultation.starts_at %></p>
-      <p> <u>Until:</u> <%= consultation.ends_at %></p>
-      <p> <u>Remark:</u> <%= consultation.message %></p>
-      <p><%= link_to 'Cancel your booking', specialist_consultation_path(consultation), class: "btn btn-ghost", method: "delete", data: { confirm: "Are you sure?" }%></p>
-    <% end %>
-    <hr>
-  </div>
-
-  <div class="links">
-  <p><%= link_to 'Place your Reservations here', new_specialist_consultation_path(@specialist), class: "btn btn-ghost"%></p>
   </div>
 </body>

@@ -37,3 +37,9 @@ import "controllers"
 import { initFlatpickr } from "../plugins/flatpickr";
 
 initFlatpickr();
+
+import { initMapbox } from '../plugins/init_mapbox';
+
+document.addEventListener('turbolinks:load', () => {
+  initMapbox();
+})

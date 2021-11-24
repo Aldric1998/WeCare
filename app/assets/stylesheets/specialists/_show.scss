@@ -1,13 +1,12 @@
-body {
-  background-color: #dee7ec;
-}
+// body {
+//   background-color: #ffffff;
+// }
 
 .descriptive {
-  background-color: #acb5ce;
+  background-color: #F5F5F5 ;
   padding: 20px 20px;
   text-align: center;
   border-radius: 5px;
-  margin: 25px 255px;
   overflow: hidden;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
@@ -30,18 +29,24 @@ body {
 
 .text-image {
   margin: 25px 25px;
-  text-align: justify;
+  text-align: center;
+}
+
+.Contact-caard {
+  font-size: 24px;
 }
 
 .image-show {
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
   text-align: center;
-  display: flex;
-  background-color: #e5ece5;
+  background-color: #D7DEDC;
   border-radius: 6px;
+  height: 50vh;
   img{
-    object-position: bottom;
     border-radius: 5px;
+    width: 100%;
+    height: 40%;
+    object-fit: contain;
   }
 }
 
@@ -60,5 +65,10 @@ body {
 }
 
 #welcome {
-  margin-bottom: 20px;
+  margin-bottom: 8px;
+}
+
+.blue-btn {
+  margin-bottom: 10px;
+  border-radius: 50%;
 }
