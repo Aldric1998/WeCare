@@ -8,13 +8,14 @@
       <hr>
       <div class="text-image">
         <div id="welcome">
-          <h2><strong> Full name: <%= @specialist.first_name @specialist.last_name %></strong></h1>
+          <h2><strong> Full name: <%= @specialist.first_name %> <%= @specialist.last_name %></strong></h1>
         </div>
-        <h2 class="Contact-card"> Contact: <%= @specialist.email @specialist.phonenumber %></h2>
+        <h2 class="Contact-card"> Contact: <%= @specialist.email %> <%= @specialist.phonenumber %></h2>
         <p> Area: <%= @specialist.address %></p>
       </div>
       <hr>
     </div>
+
 
     <div class="container">
     <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
