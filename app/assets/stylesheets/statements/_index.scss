@@ -1,0 +1,29 @@
+.card-cont {
+  background-color: #D7DEDC;
+  border-radius: 5px;
+  font-size: 10px;
+}
+.card-cont p{
+  margin: 0;
+  text-align: center;
+}
+.text-color-white-button {
+  background-color: #450D18;
+
+}
+.text-color-white-button a{
+  color: #F5F5F5 !important;
+}
+.mapboxgl-popup-content {
+  padding: 0 0 0 !important;
+}
+
+.flexing{
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+}
+.firstaidkit {
+  justify-content:space-around;
+  margin-bottom: 20px;
+}
