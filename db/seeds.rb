@@ -2,8 +2,12 @@
 
 Specialist.destroy_all
 Speciality.destroy_all
+Answer.destroy_all
+FirstaidkitAnswer.destroy_all
+PossibleAnswer.destroy_all
 Question.destroy_all
-
+Statement.destroy_all
+User.destroy_all
 titles = ["psychologist", "social worker", "generalist", "police", "legal expert", "non-profit association", "hospital", "psychiatrist"]
 
 first_names = ["Axel", "Raphael", "Pierre", "Alexandra", "Micheline", "Hubert", "Jean-Claude", "Marjory", "Pauline", "Augustin", "Julie", "Belle", "Marie", "José", "Miranda", "Jean", "Lucas", "Josette", "Daphnée", "Romain", "Aldric", "Nicolas", "Marianne", "Diane"]
@@ -50,11 +54,12 @@ q7 = Question.create!(content: "Where did it happen?", position: 8)
 q8 = Question.create!(content: "Was there any physical violence involved?", position: 9)
 q9 = Question.create!(content: "The material damage was caused by?", position: 10)
 q10 = Question.create!(content: "The main action was?", position: 11)
+q11 = Question.create!(content: "What is your connection to the incident?", position: 12)
 puts "Done"
 
 puts "Creating possible answers"
 #SEXUAL HARRASSMENT POSSIBLE ANSWERS
-preqa1 = PossibleAnswer.create!(content: "Witness", question_id: preq.id, next_position: 2)
+preqa1 = PossibleAnswer.create!(content: "Witness", question_id: preq.id, next_position: 12)
 preqa2 = PossibleAnswer.create!(content: "Victim", question_id: preq.id, next_position: 2)
 q1sa1 = PossibleAnswer.create!(content: "A person", question_id: q1.id, next_position: 3)
 q1sa2 = PossibleAnswer.create!(content: "An animal", question_id: q1.id)
@@ -72,7 +77,7 @@ q5a1 = PossibleAnswer.create!(content: "Yes", question_id: q5.id)
 q5sa2 = PossibleAnswer.create!(content: "No", question_id: q5.id)
 q5sa1 = PossibleAnswer.create!(content: "Yes", question_id: q8.id)
 q5a2 = PossibleAnswer.create!(content: "No", question_id: q8.id)
-q3ha1 = PossibleAnswer.create!(content: "Theft", question_id: q9.id)
+q3ha1 = PossibleAnswer.create!(content: "Theft", question_id: q9.id, next_position: 5)
 q3ha2 = PossibleAnswer.create!(content: "Arson", question_id: q9.id)
 q3ha1 = PossibleAnswer.create!(content: "Theft", question_id: q6.id, next_position: 5)
 q3ha2 = PossibleAnswer.create!(content: "Arson", question_id: q6.id)
@@ -88,6 +93,10 @@ q4a1 = PossibleAnswer.create!(content: "Road rage", question_id: q10.id)
 q4ra1 = PossibleAnswer.create!(content: "Road rage", question_id: q9.id, next_position: 11)
 q5ra1 = PossibleAnswer.create!(content: "Agression", question_id: q10.id)
 q5ra3 = PossibleAnswer.create!(content: "Assault", question_id: q10.id)
+q6ra1 = PossibleAnswer.create!(content: "You saw what happened", question_id: q11.id, next_position: 2)
+q6ra1 = PossibleAnswer.create!(content: "you know somebody who was a
+witness", question_id: q11.id)
+
 puts "Done"
 
 #---------------------------------------------------------------------------------------------------------------
@@ -120,7 +129,7 @@ What you can do: note down any usefull information about what the perpetrators l
 -	If the perpetrators already left: make a list of all the stolen objects and damage. Take pictures of the damage and the entry point of the perpetrators. Do not clean the damage or your house untill the police can make an official statement.
 -	Call your insurance to make sure what is covered by them.
 -	If you are insured: You can file a complaint with your insurance.
-For further information: https://www.dvv.be/nl/verzekeringen/wonen/artikelen/wat-na-een-inbraak.html", possible_answer_id: q3ha1.id )
+For further information: https://www.dvv.be/nl/verzekeringen/wonen/artikelen/wat-na-een-inbraak.html", possible_answer_id: q5ha1.id )
 
 
 firstaidkit_roadrage = FirstaidkitAnswer.create!(content: "In every case, you should:

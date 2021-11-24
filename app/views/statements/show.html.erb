@@ -1,0 +1,18 @@
+<h1>coucou</h1>
+<% if @current_question.nil? %>
+  <% @first_aid_kits.each do |kit| %>
+    <%= kit.content%>
+    <div id="map"
+      style="width: 100vw; height: 40vh;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+  <% end %>
+<%else%>
+  <%=@current_question.content%>
+  <%= simple_form_for @answer do |f| %>
+    <%= f.association :possible_answer, label_method: :content, collection: PossibleAnswer.where(question: @current_question) %>
+    <%= f.hidden_field :statement_id, value: params[:id] %>
+    <%= f.button :submit %>
+  <% end %>
+<% end %>
