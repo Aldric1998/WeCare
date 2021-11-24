@@ -17,12 +17,15 @@
 @import "specialists/index";
 @import "specialists/new";
 @import "specialists/show";
+@import "statements/index";
 
 body {
   background-color: #F5F5F5;
+
+}
+.container {
   min-height: 100vh;
 }
-
 .navbar-lewagon {
   justify-content: space-between;
   background: #18233A;
@@ -67,3 +70,7 @@ body {
 .footer .fa-heart {
   color: #D23333;
 }
+
+// display
+// align-items
+// justify-content
