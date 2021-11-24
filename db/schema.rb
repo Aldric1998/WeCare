@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_22_141000) do
+ActiveRecord::Schema.define(version: 2021_11_24_102228) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,8 @@ ActiveRecord::Schema.define(version: 2021_11_22_141000) do
     t.bigint "firstaidkit_answer_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.float "latitude"
+    t.float "longitude"
     t.index ["firstaidkit_answer_id"], name: "index_firstaidkit_specialists_on_firstaidkit_answer_id"
     t.index ["speciality_id"], name: "index_firstaidkit_specialists_on_speciality_id"
   end
