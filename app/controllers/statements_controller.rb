@@ -14,7 +14,7 @@ class StatementsController < ApplicationController
       @answers_current_questions = PossibleAnswer.where question: @current_question
 
     end
-    first_aid_kits = @statement.answers.flat_map{|ans|  ans.possible_answer }.flat_map{|p_ans|  p_ans.firstaidkit_answers }.compact
+    @first_aid_kits = @statement.answers.flat_map{|ans|  ans.possible_answer }.flat_map{|p_ans|  p_ans.firstaidkit_answers }.compact
 
   end
 
