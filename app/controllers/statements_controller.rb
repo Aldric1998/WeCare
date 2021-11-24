@@ -17,7 +17,21 @@ class StatementsController < ApplicationController
     first_aid_kits = @statement.answers.flat_map{|ans|  ans.possible_answer }.flat_map{|p_ans|  p_ans.firstaidkit_answers }.compact
 
   end
-  def index
 
+
+  def new
+    @statement = Statement.new
+  end
+
+  def create
+    @statement = Statement.new(statement_params)
+    @statement.user = current_user
+    @statement.save!
+  end
+
+  private
+
+  def statement_params
+    params.require(:statement).permit(:status, :user_id)
   end
 end
