@@ -1,2 +1,6 @@
 <h1>coucou</h1>
 <%=@current_question.content%>
+<%= simple_form_for @answer do |f| %>
+  <%= f.association :possible_answers %>
+  <%= f.button :submit %>
+<% end %>
