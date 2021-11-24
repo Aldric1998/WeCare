@@ -12,21 +12,21 @@
         <div id="welcome">
           <h2><strong> <%= @specialist.first_name %> <%= @specialist.last_name %></strong></h1>
         </div>
-        <h2 class="Contact-card"> Contact: <%= @specialist.email %> <%= @specialist.phonenumber %></h2>
+        <h2 class="Contact-caard"> Contact: <%= @specialist.email %> <%= @specialist.phonenumber %></h2>
         <p> Location: <%= @specialist.address %></p>
       </div>
       <hr>
     </div>
 
 
-    <div class="container">
+    <div class="contaner">
     <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
       <h2>Place a booking</h2>
 
       <%= simple_form_for [ @specialist, @consultation ] do |f| %>
         <%= f.input :start_time, as: :string, required: false, input_html: {class: "datepicker"} %>
         <%= f.input :end_time, as: :string, required: false, input_html: {class: "datepicker"} %>
-        <%= f.button :submit, "Submit", class: "btn btn-primary" %>
+        <%= f.button :submit, "Submit", class: "btn btn-primary blue-btn" %>
       <% end %>
     </div>
   </div>
