@@ -27,6 +27,7 @@ class StatementsController < ApplicationController
     @statement = Statement.new(statement_params)
     @statement.user = current_user
     @statement.save!
+    redirect_to statement_path(@statement)
   end
 
   private

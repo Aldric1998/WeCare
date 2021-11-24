@@ -4,10 +4,11 @@ class AnswersController < ApplicationController
   end
 
   def create
-    @statement = Statement.find(params[:id])
+    @statement = Statement.find(params[:answer][:statement_id])
     @answer = Answer.new(answer_params)
     @answer.statement = @statement
     @answer.save!
+
     redirect_to statement_path(@statement)
   end
 
