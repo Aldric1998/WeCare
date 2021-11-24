@@ -50,27 +50,28 @@ q7 = Question.create!(content: "Where did it happen?", position: 8)
 q8 = Question.create!(content: "Was there any physical violence involved?", position: 9)
 q9 = Question.create!(content: "The material damage was caused by?", position: 10)
 q10 = Question.create!(content: "The main action was?", position: 11)
+puts "Done"
 
-
+puts "Creating possible answers"
 #SEXUAL HARRASSMENT POSSIBLE ANSWERS
-preqsa1 = PossibleAnswer.create!(content: "Witness", question_id: preq.id, next_position: 2)
-preqsa2 = PossibleAnswer.create!(content: "Victim", question_id: preq.id, next_position: 2)
+preqa1 = PossibleAnswer.create!(content: "Witness", question_id: preq.id, next_position: 2)
+preqa2 = PossibleAnswer.create!(content: "Victim", question_id: preq.id, next_position: 2)
 q1sa1 = PossibleAnswer.create!(content: "A person", question_id: q1.id, next_position: 3)
 q1sa2 = PossibleAnswer.create!(content: "An animal", question_id: q1.id)
 q1sa3 = PossibleAnswer.create!(content: "A moveable object", question_id: q1.id)
 q1sa4 = PossibleAnswer.create!(content: "A building / house", question_id: q1.id)
 q2sa1 = PossibleAnswer.create!(content: "Physicial damage", question_id: q2.id, next_position: 4)
 q2sa2 = PossibleAnswer.create!(content: "Material damage", question_id: q2.id, next_position: 10)
-q3sa1 = PossibleAnswer.create!(content: "Sexually oriented", question_id: q3.id, next_position: 5)
+q3a1 = PossibleAnswer.create!(content: "Sexually oriented", question_id: q3.id, next_position: 5)
 q3sa2 = PossibleAnswer.create!(content: "Physically oriented", question_id: q3.id, next_position: 11)
 q4sa1 = PossibleAnswer.create!(content: "Family", question_id: q4.id, next_position: 6)
 q4sa2 = PossibleAnswer.create!(content: "Friends", question_id: q4.id)
 q4sa3 = PossibleAnswer.create!(content: "Lover", question_id: q4.id)
 q4sa4 = PossibleAnswer.create!(content: "Stranger / Aquaintance ", question_id: q4.id, next_position: 8)
-q5sa1 = PossibleAnswer.create!(content: "Yes", question_id: q5.id)
+q5a1 = PossibleAnswer.create!(content: "Yes", question_id: q5.id)
 q5sa2 = PossibleAnswer.create!(content: "No", question_id: q5.id)
 q5sa1 = PossibleAnswer.create!(content: "Yes", question_id: q8.id)
-q5sa2 = PossibleAnswer.create!(content: "No", question_id: q8.id)
+q5a2 = PossibleAnswer.create!(content: "No", question_id: q8.id)
 q3ha1 = PossibleAnswer.create!(content: "Theft", question_id: q9.id)
 q3ha2 = PossibleAnswer.create!(content: "Arson", question_id: q9.id)
 q3ha1 = PossibleAnswer.create!(content: "Theft", question_id: q6.id, next_position: 5)
@@ -83,10 +84,50 @@ q5ha1 = PossibleAnswer.create!(content: "In your house", question_id: q7.id, nex
 q5ha2 = PossibleAnswer.create!(content: "In your workspace", question_id: q7.id)
 q5ha3 = PossibleAnswer.create!(content: "In a neutral place", question_id: q7.id)
 q5ha4 = PossibleAnswer.create!(content: "In your car", question_id: q7.id)
-q4ra1 = PossibleAnswer.create!(content: "Road rage", question_id: q10.id)
+q4a1 = PossibleAnswer.create!(content: "Road rage", question_id: q10.id)
 q4ra1 = PossibleAnswer.create!(content: "Road rage", question_id: q9.id, next_position: 11)
 q5ra1 = PossibleAnswer.create!(content: "Agression", question_id: q10.id)
 q5ra3 = PossibleAnswer.create!(content: "Assault", question_id: q10.id)
-
+puts "Done"
 
 #---------------------------------------------------------------------------------------------------------------
+
+# FIRSTAIDKIT ANSWERS
+
+puts "Creating first aid kits"
+
+firstaidkit_sexharas = FirstaidkitAnswer.create!(content: "In every case, you should:
+-	Search for medical help (your own doctor or general services in hospitals) after the event. Ideally in the 24 hours after it happened, maximum in the 72 hours after.
+Tel.: red cross: 112 ; police: 101
+
+Reason: It is important to tend to possible wounds and to be sure that no diseases were transmitted. That way you will avoid further complications. It is also the best and most effective way to collect evidence about what happened.
+
+-	If you live under the same roof as the author(s) and you want to stay:
+Think about a place where you can go if things escalate, prepare emergency phone numbers on your phone and talk about it with people you trust.
+-	If you live under the same roof and you want to leave:
+If you do not know where to go, there are safe places provided by hospitals: https://www.seksueelgeweld.be/zorgcentra-na-seksueel-geweld-wat-voor-wie-waar
+Do not forget to take your personal documents (ID, passport, drivers license, health care papers) and personal property that you want to keep close to you.
+
+-	If the case hasn’t been started yet by the prosecutor: You can file a complaint at the nearest police station.
+-	At any point: you can fill in the form that you received at the police station to become a disadvantaged party in the case. That way you will be able to keep track of the case and add documents/proof to the case.
+- If the case already started: you can make a declaration before the judge and ask to become a civil party. This means that you get all the rights to build your case and defend it in court.", possible_answer_id: q3a1.id)
+
+firstaidkit_homeburg = FirstaidkitAnswer.create!(content: "In every case, you should:
+-	Control if the perpetrators are still on site. If yes, do not engage contact yourself, but call the police:
+Tel.: 101
+
+What you can do: note down any usefull information about what the perpetrators looked like and what they stole.
+-	If the perpetrators already left: make a list of all the stolen objects and damage. Take pictures of the damage and the entry point of the perpetrators. Do not clean the damage or your house untill the police can make an official statement.
+-	Call your insurance to make sure what is covered by them.
+-	If you are insured: You can file a complaint with your insurance.
+For further information: https://www.dvv.be/nl/verzekeringen/wonen/artikelen/wat-na-een-inbraak.html", possible_answer_id: q3ha1.id )
+
+
+firstaidkit_roadrage = FirstaidkitAnswer.create!(content: "In every case, you should:
+-	Physical violence:  Search for medical help after the event and secure the area. You can try to help the victim while you are waiting for professional help, but never put yourself in danger too.
+Tel.: red cross: 112 ; police: 101
+-	Immediately start to collect evidence of what happened
+For example: ask other witnesses or victims if they saw something and are prepared to make a statement for the police, write down number plates, write down any usefull information about the event.
+-	Further information can be found on: https://www.slachtofferzorg.be/verkeersagressie", possible_answer_id: q4a1.id)
+
+puts "Done"
