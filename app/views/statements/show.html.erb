@@ -2,6 +2,11 @@
 <% if @current_question.nil? %>
   <% @first_aid_kits.each do |kit| %>
     <%= kit.content%>
+    <div id="map"
+      style="width: 100vw; height: 40vh;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
   <% end %>
 <%else%>
   <%=@current_question.content%>

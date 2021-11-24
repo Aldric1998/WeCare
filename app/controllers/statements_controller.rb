@@ -1,5 +1,16 @@
 class StatementsController < ApplicationController
 
+  def index
+    @specialists = Specialist.all
+    @markers = @specialists.geocoded.map do |specialist|
+      {
+        lat: specialist.latitude,
+        lng: specialist.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { specialist: specialist })
+      }
+    end
+  end
+
   def show
     @statement = Statement.find(params[:id])
     @answer = Answer.new
@@ -15,6 +26,14 @@ class StatementsController < ApplicationController
 
     end
     @first_aid_kits = @statement.answers.flat_map{|ans|  ans.possible_answer }.flat_map{|p_ans|  p_ans.firstaidkit_answers }.compact
+    @specialists = Specialist.all
+    @markers = @specialists.geocoded.map do |specialist|
+      {
+        lat: specialist.latitude,
+        lng: specialist.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { specialist: specialist })
+      }
+    end
 
   end
 
@@ -34,14 +53,6 @@ class StatementsController < ApplicationController
 
   def statement_params
     params.require(:statement).permit(:status, :user_id)
-  def index
-    @specialists = Specialist.all
-    @markers = @specialists.geocoded.map do |specialist|
-      {
-        lat: specialist.latitude,
-        lng: specialist.longitude,
-        info_window: render_to_string(partial: "info_window", locals: { specialist: specialist })
-      }
-    end
   end
+
 end
