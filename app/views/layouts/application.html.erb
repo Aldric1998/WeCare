@@ -34,11 +34,15 @@
           <li class="nav-item active">
             <a class="nav-link white-link" href="#">About us</a>
           </li>
+          <li class="nav-item">
+            <%= link_to "Login", new_user_session_path, class: "nav-link white-link" %>
+          </li>
         </ul>
       </div>
     </div>
 
     <%= yield %>
+    <%= render 'shared/flashes' %>
     <div class="footer">
       <div class="footer-links">
         <a href="#"><i class="fab fa-github"></i></a>
