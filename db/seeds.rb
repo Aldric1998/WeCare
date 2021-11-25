@@ -8,7 +8,7 @@ PossibleAnswer.destroy_all
 Question.destroy_all
 Statement.destroy_all
 User.destroy_all
-titles = ["psychologist", "social worker", "generalist", "police", "legal expert", "non-profit association", "hospital", "psychiatrist"]
+titles = ["psychologist", "insurance", "social worker", "generalist", "police", "legal expert", "non-profit association", "hospital", "psychiatrist"]
 
 first_names = ["Axel", "Raphael", "Pierre", "Alexandra", "Micheline", "Hubert", "Jean-Claude", "Marjory", "Pauline", "Augustin", "Julie", "Belle", "Marie", "José", "Miranda", "Jean", "Lucas", "Josette", "Daphnée", "Romain", "Aldric", "Nicolas", "Marianne", "Diane"]
 
@@ -32,7 +32,7 @@ titles.each do |title|
 end
 
 puts "Creating specialists"
-10.times do
+14.times do
   Specialist.create!(first_name: first_names.sample, last_name: last_names.sample, address: addresses.sample, availability: availabilities.sample, speciality: specialties.sample, phonenumber: phonenumbers.sample, email: emails.sample)
 end
 puts "Done"
@@ -120,6 +120,14 @@ Do not forget to take your personal documents (ID, passport, drivers license, he
 -	If the case hasn’t been started yet by the prosecutor: You can file a complaint at the nearest police station.
 -	At any point: you can fill in the form that you received at the police station to become a disadvantaged party in the case. That way you will be able to keep track of the case and add documents/proof to the case.
 - If the case already started: you can make a declaration before the judge and ask to become a civil party. This means that you get all the rights to build your case and defend it in court.", possible_answer_id: q3a1.id)
+firstaidkit_sexharas.specialities << specialties[0]
+firstaidkit_sexharas.specialities << specialties[2]
+firstaidkit_sexharas.specialities << specialties[3]
+firstaidkit_sexharas.specialities << specialties[4]
+firstaidkit_sexharas.specialities << specialties[5]
+firstaidkit_sexharas.specialities << specialties[6]
+firstaidkit_sexharas.specialities << specialties[7]
+firstaidkit_sexharas.specialities << specialties[8]
 
 firstaidkit_homeburg = FirstaidkitAnswer.create!(content: "In every case, you should:
 -	Control if the perpetrators are still on site. If yes, do not engage contact yourself, but call the police:
@@ -130,7 +138,9 @@ What you can do: note down any usefull information about what the perpetrators l
 -	Call your insurance to make sure what is covered by them.
 -	If you are insured: You can file a complaint with your insurance.
 For further information: https://www.dvv.be/nl/verzekeringen/wonen/artikelen/wat-na-een-inbraak.html", possible_answer_id: q5ha1.id )
-
+firstaidkit_homeburg.specialities << specialties[1]
+firstaidkit_homeburg.specialities << specialties[4]
+firstaidkit_homeburg.specialities << specialties[5]
 
 firstaidkit_roadrage = FirstaidkitAnswer.create!(content: "In every case, you should:
 -	Physical violence:  Search for medical help after the event and secure the area. You can try to help the victim while you are waiting for professional help, but never put yourself in danger too.
@@ -138,5 +148,10 @@ Tel.: red cross: 112 ; police: 101
 -	Immediately start to collect evidence of what happened
 For example: ask other witnesses or victims if they saw something and are prepared to make a statement for the police, write down number plates, write down any usefull information about the event.
 -	Further information can be found on: https://www.slachtofferzorg.be/verkeersagressie", possible_answer_id: q4a1.id)
+firstaidkit_roadrage.specialities << specialties[0]
+firstaidkit_roadrage.specialities << specialties[1]
+firstaidkit_roadrage.specialities << specialties[3]
+firstaidkit_roadrage.specialities << specialties[4]
+firstaidkit_roadrage.specialities << specialties[5]
 
 puts "Done"

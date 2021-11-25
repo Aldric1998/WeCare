@@ -1,14 +1,6 @@
 class StatementsController < ApplicationController
 
   def index
-    @specialists = Specialist.all
-    @markers = @specialists.geocoded.map do |specialist|
-      {
-        lat: specialist.latitude,
-        lng: specialist.longitude,
-        info_window: render_to_string(partial: "info_window", locals: { specialist: specialist })
-      }
-    end
   end
 
   def show
@@ -26,8 +18,9 @@ class StatementsController < ApplicationController
 
     end
     @first_aid_kits = @statement.answers.flat_map{|ans|  ans.possible_answer }.flat_map{|p_ans|  p_ans.firstaidkit_answers }.compact
-    @specialists = Specialist.all
-    @markers = @specialists.geocoded.map do |specialist|
+    @specialists = @first_aid_kits.flat_map{|first_aid_kit | first_aid_kit.specialists}
+    @markers = @specialists.map do |specialist|
+      next if specialist.latitude.nil?
       {
         lat: specialist.latitude,
         lng: specialist.longitude,
