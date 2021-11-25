@@ -90,7 +90,7 @@ ActiveRecord::Schema.define(version: 2021_11_24_102228) do
   end
 
   create_table "specialists", force: :cascade do |t|
-    t.string "first_name"
+    t.string "f$irst_name"
     t.string "last_name"
     t.string "address"
     t.boolean "availability"

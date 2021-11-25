@@ -6,10 +6,9 @@ class SpecialistsController < ApplicationController
         specialists.first_name @@ :query \
         OR specialists.last_name @@ :query \
         OR specialists.address @@ :query \
-        OR users.first_name @@ :query \
-        OR users.last_name @@ :query \
+        OR specialist.speciality_id @@ :query
       "
-      @specialists = Specialist.joins(:user).where(sql_query, query: "%#{params[:query]}%")
+      @specialists = Specialist.where(sql_query, query: "%#{params[:query]}%")
     else
       @specialists = Specialist.all
     end

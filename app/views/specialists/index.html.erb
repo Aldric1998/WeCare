@@ -1,3 +1,11 @@
+<%= form_tag specialists_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a specialist"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
 <div class="card-specialist">
     <% @specialists.each do |specialist| %>
      <div class="box">
@@ -14,6 +22,8 @@
           <%= specialist.phonenumber %>
           <br>
           <%= specialist.email %>
+          <br>
+          <%= specialist.speciality.name %>
         </h2>
         <p><%= specialist.address %></p>
         <span class="flex-column align-items-center">
