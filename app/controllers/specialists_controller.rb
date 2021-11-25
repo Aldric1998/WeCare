@@ -2,14 +2,7 @@ class SpecialistsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :index]
   def index
     if params[:query].present?
-      sql_query = " \
-        specialists.first_name @@ :query \
-        OR specialists.last_name @@ :query \
-        OR specialists.address @@ :query \
-        OR users.first_name @@ :query \
-        OR users.last_name @@ :query \
-      "
-      @specialists = Specialist.joins(:user).where(sql_query, query: "%#{params[:query]}%")
+      @specialists = Specialist.global_search(params[:query])
     else
       @specialists = Specialist.all
     end
