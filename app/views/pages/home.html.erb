@@ -10,8 +10,10 @@
 
 
   <div class="btn btn-flat help-button">
-  <p>Get Help</p>
+  <%# <p>Get Help</p> %>
+  <%= link_to "Get Help", new_statement_path %>
   </div>
+   <%# <%= link_to "Get Help", new_statement_path, class: "btn btn-flat help-button" %>
 
   <div class="icon-schema">
     <div class="icon-items">
@@ -19,7 +21,7 @@
       <i class="far fa-edit"></i>
       </div>
       <div class="undericon-text">
-      Answer a few questions.
+      Answer questions
       </div>
     </div>
 
@@ -28,7 +30,7 @@
       <i class="fas fa-stopwatch"></i>
       </div>
       <div class="undericon-text">
-      Will take you 1 minute.
+      One minute
       </div>
     </div>
 
@@ -37,7 +39,7 @@
       <i class="fas fa-medkit"></i>
       </div>
       <div class="undericon-text">
-      Get a personal First Aid Kit.
+      Get your First Aid Kit
       </div>
     </div>
   </div>
