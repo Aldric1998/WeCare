@@ -20,6 +20,11 @@ font-size: 20px;
 
 .help-button {
   width: 36vw;
+  box-shadow: rgba(69, 13, 24, 0.4) -5px 5px,
+  rgba(69, 13, 24, 0.3) -10px 10px,
+  rgba(69, 13, 24, 0.2) -15px 15px,
+  rgba(69, 13, 24, 0.1) -20px 20px,
+  rgba(69, 13, 24, 0.05) -25px 25px;
 }
 
 .fullpagecontainer {
@@ -36,9 +41,16 @@ font-size: 20px;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  height: 20vh;
-  border: thick double #18233A;
+  height: 16vh;
+  // border: solid;
+  // border-color: #18233A;
+  // border-width: 1px;
   border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+  rgba(0, 0, 0, 0.12) 0px -12px 30px,
+  rgba(0, 0, 0, 0.12) 0px 4px 6px,
+  rgba(0, 0, 0, 0.17) 0px 12px 13px,
+  rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .icon-items {
@@ -46,6 +58,7 @@ font-size: 20px;
   align-items: center;
   flex-direction: column;
   max-width: 18%;
+  padding-top: 8px;
 }
 
 
@@ -70,6 +83,11 @@ font-size: 20px;
   margin-left: 20px;
   margin-right: 20px;
   margin-top: -20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+  rgba(0, 0, 0, 0.12) 0px -12px 30px,
+  rgba(0, 0, 0, 0.12) 0px 4px 6px,
+  rgba(0, 0, 0, 0.17) 0px 12px 13px,
+  rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 
@@ -80,4 +98,12 @@ font-size: 20px;
 
 .undericon-text {
   text-align: center;
+  padding-top: 12px;
+  font-size: 13px;
+  color: #18233A;
+  width: 75px;
+}
+
+a {
+  color: #D7DEDC;
 }
