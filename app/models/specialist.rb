@@ -8,9 +8,9 @@ class Specialist < ApplicationRecord
 
   include PgSearch::Model
   pg_search_scope :global_search,
-    against: [ :first_name, :last_name, :address, :speciality ],
+    against: [ :first_name, :last_name, :address ],
     associated_against: {
-      user: [ :first_name, :last_name ]
+      speciality: [ :name ]
   },
   using: {
     tsearch: { prefix: true }

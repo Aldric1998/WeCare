@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_25_100417) do
+ActiveRecord::Schema.define(version: 2021_11_25_151450) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -127,7 +127,7 @@ ActiveRecord::Schema.define(version: 2021_11_25_100417) do
   end
 
   create_table "specialists", force: :cascade do |t|
-    t.string "f$irst_name"
+    t.string "first_name"
     t.string "last_name"
     t.string "address"
     t.boolean "availability"
@@ -138,7 +138,9 @@ ActiveRecord::Schema.define(version: 2021_11_25_100417) do
     t.datetime "updated_at", precision: 6, null: false
     t.float "latitude"
     t.float "longitude"
+    t.bigint "user_id"
     t.index ["speciality_id"], name: "index_specialists_on_speciality_id"
+    t.index ["user_id"], name: "index_specialists_on_user_id"
   end
 
   create_table "specialities", force: :cascade do |t|
@@ -187,5 +189,6 @@ ActiveRecord::Schema.define(version: 2021_11_25_100417) do
   add_foreign_key "forum_threads", "users"
   add_foreign_key "possible_answers", "questions"
   add_foreign_key "specialists", "specialities"
+  add_foreign_key "specialists", "users"
   add_foreign_key "statements", "users"
 end

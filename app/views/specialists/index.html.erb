@@ -1,3 +1,6 @@
+<div class="links">
+  <p><%= link_to 'Register Specialist', new_specialist_path(@specialist), class: "btn btn-ghost"%></p>
+</div>
 <%= form_tag specialists_path, method: :get do %>
   <%= text_field_tag :query,
     params[:query],
