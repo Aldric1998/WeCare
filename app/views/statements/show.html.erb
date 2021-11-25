@@ -42,14 +42,6 @@
         </div>
     <% end %>
     </div>
-  <%else%>
-    <%=@current_question.content%>
-    <%= simple_form_for @answer do |f| %>
-      <%= f.association :possible_answer, label_method: :content, collection: PossibleAnswer.where(question: @current_question) %>
-      <%= f.hidden_field :statement_id, value: params[:id] %>
-      <%= f.button :submit %>
-    <% end %>
-  <% end %>
 <%else%>
   <% if @last_question.nil? %>
     <%= ""%>
