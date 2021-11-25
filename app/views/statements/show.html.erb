@@ -1,47 +1,26 @@
-<div class="statement-controller">
+<div class="statement-controller" data-controller="btn-firstaidkit">
+
   <% if @current_question.nil? %>
     <% @first_aid_kits.each do |kit| %>
-      <ul class="list-inline tabs-underlined">
-        <li>
-          <a href="#" class="tab-underlined">Requests</a>
-          <p><%=kit.content.html_safe%></p>
-        </li>
-        <li>
-          <a href="#" class="tab-underlined">Requests</a>
-        </li>
-        <li>
-          <a href="#" class="tab-underlined">Conversations</a>
-        </li>
-      </ul>
-      <div class="fak-container">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">What to do in your situation</button>
-        <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-sm">
-            <div class="modal-content">
 
+    <button id="btn1" data-action="click->btn-firstaidkit#clickbtn">What to do in your situation</button>
+      <div class="fak-text" data-btn-firstaidkit-target="content" >
+        <p><%=kit.content.html_safe%></p>
+      </div>
 
-            </div>
-          </div>
-        </div>
-
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#forumdisplay">Find help with others</button>
-        <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="forumdisplay" aria-hidden="true">
-          <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-              to be announced
-            </div>
-          </div>
-        </div>
-        <div class="mapping-fak">
-          <h4>ℹ️ These specialists are here for you</h4>
+    <button id="btn2" data-action="click->btn-firstaidkit#clickbtn">Fora</button>
+      <div class="fak-fora d-none" data-btn-firstaidkit-target="content2">
+          <p>to be announced</p>
+      </div>
+    <button id="btn3" data-action="click->btn-firstaidkit#clickbtn">Find</button>
+      <div class="fak-maps d-none" data-btn-firstaidkit-target="content3">
           <div id="map"
                 style="width: 100vw; height: 40vh;"
                 data-markers="<%= @markers.to_json %>"
                 data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
           </div>
-        </div>
+      </div>
     <% end %>
-    </div>
   <%else%>
     <%=@current_question.content%>
     <%= simple_form_for @answer do |f| %>
