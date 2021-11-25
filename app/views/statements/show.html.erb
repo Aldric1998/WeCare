@@ -1,18 +1,53 @@
-<h1>coucou</h1>
-<% if @current_question.nil? %>
-  <% @first_aid_kits.each do |kit| %>
-    <%= kit.content%>
-    <div id="map"
-      style="width: 100vw; height: 40vh;"
-      data-markers="<%= @markers.to_json %>"
-      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+<div class="statement-controller">
+  <% if @current_question.nil? %>
+    <% @first_aid_kits.each do |kit| %>
+      <ul class="list-inline tabs-underlined">
+        <li>
+          <a href="#" class="tab-underlined">Requests</a>
+          <p><%=kit.content.html_safe%></p>
+        </li>
+        <li>
+          <a href="#" class="tab-underlined">Requests</a>
+        </li>
+        <li>
+          <a href="#" class="tab-underlined">Conversations</a>
+        </li>
+      </ul>
+      <div class="fak-container">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">What to do in your situation</button>
+        <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+
+
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#forumdisplay">Find help with others</button>
+        <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="forumdisplay" aria-hidden="true">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+              to be announced
+            </div>
+          </div>
+        </div>
+        <div class="mapping-fak">
+          <h4>ℹ️ These specialists are here for you</h4>
+          <div id="map"
+                style="width: 100vw; height: 40vh;"
+                data-markers="<%= @markers.to_json %>"
+                data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+          </div>
+        </div>
+    <% end %>
     </div>
+  <%else%>
+    <%=@current_question.content%>
+    <%= simple_form_for @answer do |f| %>
+      <%= f.association :possible_answer, label_method: :content, collection: PossibleAnswer.where(question: @current_question) %>
+      <%= f.hidden_field :statement_id, value: params[:id] %>
+      <%= f.button :submit %>
+    <% end %>
   <% end %>
-<%else%>
-  <%=@current_question.content%>
-  <%= simple_form_for @answer do |f| %>
-    <%= f.association :possible_answer, label_method: :content, collection: PossibleAnswer.where(question: @current_question) %>
-    <%= f.hidden_field :statement_id, value: params[:id] %>
-    <%= f.button :submit %>
-  <% end %>
-<% end %>
+</div>

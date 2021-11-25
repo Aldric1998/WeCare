@@ -1,5 +1,5 @@
 #Gems
-
+FirstaidkitSpecialist.destroy_all
 Specialist.destroy_all
 Speciality.destroy_all
 Answer.destroy_all
@@ -8,7 +8,7 @@ PossibleAnswer.destroy_all
 Question.destroy_all
 Statement.destroy_all
 User.destroy_all
-titles = ["psychologist", "social worker", "generalist", "police", "legal expert", "non-profit association", "hospital", "psychiatrist"]
+titles = ["psychologist", "insurance", "social worker", "generalist", "police", "legal expert", "non-profit association", "hospital", "psychiatrist"]
 
 first_names = ["Axel", "Raphael", "Pierre", "Alexandra", "Micheline", "Hubert", "Jean-Claude", "Marjory", "Pauline", "Augustin", "Julie", "Belle", "Marie", "José", "Miranda", "Jean", "Lucas", "Josette", "Daphnée", "Romain", "Aldric", "Nicolas", "Marianne", "Diane"]
 
@@ -32,7 +32,7 @@ titles.each do |title|
 end
 
 puts "Creating specialists"
-10.times do
+14.times do
   Specialist.create!(first_name: first_names.sample, last_name: last_names.sample, address: addresses.sample, availability: availabilities.sample, speciality: specialties.sample, phonenumber: phonenumbers.sample, email: emails.sample)
 end
 puts "Done"
@@ -105,38 +105,52 @@ puts "Done"
 
 puts "Creating first aid kits"
 
-firstaidkit_sexharas = FirstaidkitAnswer.create!(content: "In every case, you should:
--	Search for medical help (your own doctor or general services in hospitals) after the event. Ideally in the 24 hours after it happened, maximum in the 72 hours after.
-Tel.: red cross: 112 ; police: 101
+firstaidkit_sexharas = FirstaidkitAnswer.create!(content:
+"<h5>In every case, you should:</h5>
+<p> Search for medical help (your own doctor or general services in hospitals) after the event. Ideally in the 24 hours after it happened, maximum in the 72 hours after.</p>
+<p><strong>Tel.: red cross: 112 ; police: 101</strong></p>
+<p>Reason: It is important to tend to possible wounds and to be sure that no diseases were transmitted. That way you will avoid further complications. It is also the best and most effective way to collect evidence about what happened.</p>
+<h5>If you live under the same roof as the author(s) and you want to stay:</h5>
+<p>Think about a place where you can go if things escalate, prepare emergency phone numbers on your phone and talk about it with people you trust.</p>
+<h5>If you live under the same roof and you want to leave:</h5>
+<p>If you do not know where to go, there are safe places provided by hospitals: <a href='https://www.seksueelgeweld.be/zorgcentra-na-seksueel-geweld-wat-voor-wie-waar'>here</a>
+Do not forget to take your personal documents (ID, passport, drivers license, health care papers) and personal property that you want to keep close to you.</p>
 
-Reason: It is important to tend to possible wounds and to be sure that no diseases were transmitted. That way you will avoid further complications. It is also the best and most effective way to collect evidence about what happened.
+<h5>If the case hasn’t been started yet by the prosecutor:</h5> <p>You can file a complaint at the nearest police station.</p>
+<h5>At any point: </h5> <p>you can fill in the form that you received at the police station to become a disadvantaged party in the case. That way you will be able to keep track of the case and add documents/proof to the case.</p>
+<h5>If the case already started: </h5> <p>you can make a declaration before the judge and ask to become a civil party. This means that you get all the rights to build your case and defend it in court.</p>", possible_answer_id: q3a1.id)
+firstaidkit_sexharas.specialities << specialties[0]
+firstaidkit_sexharas.specialities << specialties[2]
+firstaidkit_sexharas.specialities << specialties[3]
+firstaidkit_sexharas.specialities << specialties[4]
+firstaidkit_sexharas.specialities << specialties[5]
+firstaidkit_sexharas.specialities << specialties[6]
+firstaidkit_sexharas.specialities << specialties[7]
+firstaidkit_sexharas.specialities << specialties[8]
 
--	If you live under the same roof as the author(s) and you want to stay:
-Think about a place where you can go if things escalate, prepare emergency phone numbers on your phone and talk about it with people you trust.
--	If you live under the same roof and you want to leave:
-If you do not know where to go, there are safe places provided by hospitals: https://www.seksueelgeweld.be/zorgcentra-na-seksueel-geweld-wat-voor-wie-waar
-Do not forget to take your personal documents (ID, passport, drivers license, health care papers) and personal property that you want to keep close to you.
-
--	If the case hasn’t been started yet by the prosecutor: You can file a complaint at the nearest police station.
--	At any point: you can fill in the form that you received at the police station to become a disadvantaged party in the case. That way you will be able to keep track of the case and add documents/proof to the case.
-- If the case already started: you can make a declaration before the judge and ask to become a civil party. This means that you get all the rights to build your case and defend it in court.", possible_answer_id: q3a1.id)
-
-firstaidkit_homeburg = FirstaidkitAnswer.create!(content: "In every case, you should:
--	Control if the perpetrators are still on site. If yes, do not engage contact yourself, but call the police:
-Tel.: 101
+firstaidkit_homeburg = FirstaidkitAnswer.create!(content: "<h5>In every case, you should:</h5>
+<p>Control if the perpetrators are still on site. If yes, do not engage contact yourself, but call the police:</p>
+<p><strong>Tel.: 101</strong></p>
 
 What you can do: note down any usefull information about what the perpetrators looked like and what they stole.
--	If the perpetrators already left: make a list of all the stolen objects and damage. Take pictures of the damage and the entry point of the perpetrators. Do not clean the damage or your house untill the police can make an official statement.
--	Call your insurance to make sure what is covered by them.
--	If you are insured: You can file a complaint with your insurance.
-For further information: https://www.dvv.be/nl/verzekeringen/wonen/artikelen/wat-na-een-inbraak.html", possible_answer_id: q5ha1.id )
+<h5>If the perpetrators already left: make a list of all the stolen objects and damage. Take pictures of the damage and the entry point of the perpetrators. Do not clean the damage or your house untill the police can make an official statement.</h5>
+<h5>Call your insurance to make sure what is covered by them.</h5>
+<h5>If you are insured: You can file a complaint with your insurance.</h5>
+<p><a href='https://www.dvv.be/nl/verzekeringen/wonen/artikelen/wat-na-een-inbraak.html'>Any other questions?</a>", possible_answer_id: q5ha1.id )
+firstaidkit_homeburg.specialities << specialties[1]
+firstaidkit_homeburg.specialities << specialties[4]
+firstaidkit_homeburg.specialities << specialties[5]
 
-
-firstaidkit_roadrage = FirstaidkitAnswer.create!(content: "In every case, you should:
--	Physical violence:  Search for medical help after the event and secure the area. You can try to help the victim while you are waiting for professional help, but never put yourself in danger too.
-Tel.: red cross: 112 ; police: 101
--	Immediately start to collect evidence of what happened
-For example: ask other witnesses or victims if they saw something and are prepared to make a statement for the police, write down number plates, write down any usefull information about the event.
--	Further information can be found on: https://www.slachtofferzorg.be/verkeersagressie", possible_answer_id: q4a1.id)
+firstaidkit_roadrage = FirstaidkitAnswer.create!(content: "
+<h5>In case of physical violence: </h5> <p>Search for medical help after the event and secure the area. You can try to help the victim while you are waiting for professional help, but never put yourself in danger too.</p>
+<p><strong>Tel.: red cross: 112 ; police: 101</strong></p>
+<p>Immediately start to collect evidence of what happened</p>
+<p>For example: ask other witnesses or victims if they saw something and are prepared to make a statement for the police, write down number plates, write down any usefull information about the event.</p>
+<p>Further information can be found <a href='https://www.slachtofferzorg.be/verkeersagressie'>here</a></p>", possible_answer_id: q4a1.id)
+firstaidkit_roadrage.specialities << specialties[0]
+firstaidkit_roadrage.specialities << specialties[1]
+firstaidkit_roadrage.specialities << specialties[3]
+firstaidkit_roadrage.specialities << specialties[4]
+firstaidkit_roadrage.specialities << specialties[5]
 
 puts "Done"
