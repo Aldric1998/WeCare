@@ -26,7 +26,7 @@ class StatementsController < ApplicationController
         lng: specialist.longitude,
         info_window: render_to_string(partial: "info_window", locals: { specialist: specialist })
       }
-    end
+    end.compact
 
   end
 

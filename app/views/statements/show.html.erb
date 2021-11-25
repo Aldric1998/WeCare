@@ -1,21 +1,30 @@
-<div class="container">
+<div class="statement-controller">
   <% if @current_question.nil? %>
-    <div class="fak-container">
-    <hr>
-      <div class="fak-textcontainer">
-        <strong>What you can do in this situation?</strong>
-        <br>
-        <br>
-        <% @first_aid_kits.each do |kit| %>
-          <div class="fak-text"><%=kit.content%></div>
-        <br>
-      </div>
-      <strong>Find specialists in your area:</strong>
-      <br>
-        <div id="map"
-          style="width: 100vw; height: 40vh;"
-          data-markers="<%= @markers.to_json %>"
-          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      <div class="fak-container">
+        <div class="btn-group">
+          <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            What to do in your situation
+          </button>
+          <div class="dropdown-menu">
+            <% @first_aid_kits.each do |kit| %>
+            <p><%=kit.content.html_safe%></p>
+          </div>
+        </div>
+        <div class="btn-group">
+          <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Find help with others
+          </button>
+          <div class="dropdown-menu">
+            to be announced
+          </div>
+        </div>
+        <div class="mapping-fak">
+          <h4>ℹ️ These specialists are here for you</h4>
+          <div id="map"
+                style="width: 100vw; height: 40vh;"
+                data-markers="<%= @markers.to_json %>"
+                data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+          </div>
         </div>
       <% end %>
     </div>

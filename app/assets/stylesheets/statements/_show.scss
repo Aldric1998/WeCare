@@ -1,13 +1,29 @@
+.statement-controller {
+  min-height: 86vh;
+}
+
 .fak-container {
-  width: 100vh;
-}
-
-.fak-textcontainer {
-  background-color: #D7DEDC;
-  margin: 10px;
-  padding: 5px 10px;
-}
-
-.fak-text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   text-align: center;
+}
+
+.btn-secondary {
+  background-color: #450D18 !important;
+  border-color: #D7DEDC;
+}
+
+.btn-group {
+  margin: 15px auto;
+}
+.show p {
+  font-size: 12px;
+}
+
+.show h5 {
+  font-size: 14px;
+}
+.mapping-fak {
+  margin-top: 50px;
 }
