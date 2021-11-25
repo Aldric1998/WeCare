@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_24_102228) do
+ActiveRecord::Schema.define(version: 2021_11_25_100417) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,6 +71,43 @@ ActiveRecord::Schema.define(version: 2021_11_24_102228) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["firstaidkit_answer_id"], name: "index_firstaidkit_specialists_on_firstaidkit_answer_id"
     t.index ["speciality_id"], name: "index_firstaidkit_specialists_on_speciality_id"
+  end
+
+  create_table "forum_categories", id: :serial, force: :cascade do |t|
+    t.string "name", null: false
+    t.string "slug", null: false
+    t.string "color", default: "000000"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "forum_posts", id: :serial, force: :cascade do |t|
+    t.integer "forum_thread_id"
+    t.integer "user_id"
+    t.text "body"
+    t.boolean "solved", default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "forum_subscriptions", id: :serial, force: :cascade do |t|
+    t.integer "forum_thread_id"
+    t.integer "user_id"
+    t.string "subscription_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "forum_threads", id: :serial, force: :cascade do |t|
+    t.integer "forum_category_id"
+    t.integer "user_id"
+    t.string "title", null: false
+    t.string "slug", null: false
+    t.integer "forum_posts_count", default: 0
+    t.boolean "pinned", default: false
+    t.boolean "solved", default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "possible_answers", force: :cascade do |t|
@@ -142,6 +179,12 @@ ActiveRecord::Schema.define(version: 2021_11_24_102228) do
   add_foreign_key "firstaidkit_answers", "possible_answers"
   add_foreign_key "firstaidkit_specialists", "firstaidkit_answers"
   add_foreign_key "firstaidkit_specialists", "specialities"
+  add_foreign_key "forum_posts", "forum_threads"
+  add_foreign_key "forum_posts", "users"
+  add_foreign_key "forum_subscriptions", "forum_threads"
+  add_foreign_key "forum_subscriptions", "users"
+  add_foreign_key "forum_threads", "forum_categories"
+  add_foreign_key "forum_threads", "users"
   add_foreign_key "possible_answers", "questions"
   add_foreign_key "specialists", "specialities"
   add_foreign_key "statements", "users"
