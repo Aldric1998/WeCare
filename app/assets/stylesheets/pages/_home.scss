@@ -25,21 +25,25 @@ font-size: 20px;
 .fullpagecontainer {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   height: 80vh;
   align-items: center;
+  min-height: 86vh;
 }
 
 .icon-schema {
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  height: 11vh;
+  height: 20vh;
+  border: thick double #18233A;
+  border-radius: 7px;
 }
 
 .icon-items {
   display: flex;
+  align-items: center;
   flex-direction: column;
   max-width: 18%;
 }
@@ -63,9 +67,17 @@ font-size: 20px;
   height: 33vh;
   padding: 17px;
   border-radius: 11px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: -20px;
 }
 
 
 .icons {
   font-size: 30px;
+  color: #18233A;
+}
+
+.undericon-text {
+  text-align: center;
 }
