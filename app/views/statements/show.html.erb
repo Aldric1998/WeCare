@@ -21,12 +21,29 @@
           </div>
       </div>
     <% end %>
-  <%else%>
-    <%=@current_question.content%>
-    <%= simple_form_for @answer do |f| %>
-      <%= f.association :possible_answer, label_method: :content, collection: PossibleAnswer.where(question: @current_question) %>
-      <%= f.hidden_field :statement_id, value: params[:id] %>
-      <%= f.button :submit %>
-    <% end %>
+    </div>
+<%else%>
+  <% if @last_question.nil? %>
+    <%= ""%>
+  <% else %>
+    <% @statement.possible_answers.each do |possible_answer| %>
+      <div class="dropdown">
+        <p class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= possible_answer.question.content%>
+        </p>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <%= possible_answer.content%>
+        </div>
+      </div>
+      <% end %>
+
   <% end %>
-</div>
+  <%=@current_question.content%>
+  <%= simple_form_for @answer do |f| %>
+    <%= f.hidden_field :statement_id, value: params[:id] %>
+
+    <%= f.association :possible_answer, label_method: :content, collection: PossibleAnswer.where(question: @current_question),as: :radio_buttons, input_html: {class: "category-selector"} %>
+
+    <%= f.button :submit %>
+  <% end %>
+<% end %>

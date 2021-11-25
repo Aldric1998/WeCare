@@ -18,7 +18,9 @@
 @import "specialists/new";
 @import "specialists/show";
 @import "statements/index";
+@import "statements/new";
 @import "statements/show";
+
 
 @import "simple_discussion";
 
@@ -74,6 +76,9 @@ body {
   color: #D23333;
 }
 
-// display
-// align-items
-// justify-content
+// .footerdown {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   height: 101vh;
+// }

@@ -1,3 +1,36 @@
+.form-check {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+}
+.category-selector {
+  position: absolute;
+  transform: scale(0);
+}
+
+.category-selector + label {
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 150px;
+  font-size: 15px;
+  text-align: left;
+  padding: 10px 10px 30px 10px;
+  border: 1px solid #EAEAEA;
+  border-radius: 4px;
+  background-color: white;
+}
+.category-selector:checked + label {
+  background-color: #450D18 !important;
+  color: white ;
+}
+.form-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .statement-controller {
   min-height: 86vh;
 }
