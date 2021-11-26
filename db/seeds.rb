@@ -1,4 +1,5 @@
 #Gems
+ForumCategory.destroy_all
 FirstaidkitSpecialist.destroy_all
 Specialist.destroy_all
 Speciality.destroy_all
@@ -99,6 +100,15 @@ witness", question_id: q11.id)
 
 puts "Done"
 
+puts "forumcat creating"
+namecategorie = ["Sexual harassment", "Roadrage", "Home burglary"]
+categorie = []
+namecategorie.each do |smth|
+  categorie << ForumCategory.create(name: smth)
+end
+ForumCategory.create!(name: "Sexual harassment", slug: "sexual harassment")
+ForumCategory.create!(name: "Roadrage", slug: "roadrage")
+ForumCategory.create!(name: "Home burglary", slug: "home burglary")
 #---------------------------------------------------------------------------------------------------------------
 
 # FIRSTAIDKIT ANSWERS
@@ -129,6 +139,7 @@ firstaidkit_sexharas.specialities << specialties[5]
 firstaidkit_sexharas.specialities << specialties[6]
 firstaidkit_sexharas.specialities << specialties[7]
 firstaidkit_sexharas.specialities << specialties[8]
+firstaidkit_homeburg.forum_category = categorie[1]
 
 firstaidkit_homeburg = FirstaidkitAnswer.create!(content: "<i class='fas fa-exclamation-triangle'></i>
 <p>Control if the perpetrators are still on site. If yes, do not engage contact yourself, but call the police:</p>
@@ -144,6 +155,7 @@ firstaidkit_homeburg = FirstaidkitAnswer.create!(content: "<i class='fas fa-excl
 firstaidkit_homeburg.specialities << specialties[1]
 firstaidkit_homeburg.specialities << specialties[4]
 firstaidkit_homeburg.specialities << specialties[5]
+firstaidkit_homeburg.forum_category = categorie[2]
 
 firstaidkit_roadrage = FirstaidkitAnswer.create!(content: "
 <strong><i class='fas fa-exclamation-triangle'></i>
@@ -159,5 +171,5 @@ firstaidkit_roadrage.specialities << specialties[1]
 firstaidkit_roadrage.specialities << specialties[3]
 firstaidkit_roadrage.specialities << specialties[4]
 firstaidkit_roadrage.specialities << specialties[5]
-
+firstaidkit_homeburg.forum_category = categorie[3]
 puts "Done"

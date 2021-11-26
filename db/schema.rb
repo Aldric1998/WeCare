@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_25_151450) do
+ActiveRecord::Schema.define(version: 2021_11_26_152101) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,6 +61,8 @@ ActiveRecord::Schema.define(version: 2021_11_25_151450) do
     t.bigint "possible_answer_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "forum_category_id"
+    t.index ["forum_category_id"], name: "index_firstaidkit_answers_on_forum_category_id"
     t.index ["possible_answer_id"], name: "index_firstaidkit_answers_on_possible_answer_id"
   end
 
