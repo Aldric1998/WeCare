@@ -20,20 +20,17 @@ font-size: 20px;
 
 .help-button {
   width: 36vw;
-  box-shadow: rgba(69, 13, 24, 0.4) -5px 5px,
-  rgba(69, 13, 24, 0.3) -10px 10px,
-  rgba(69, 13, 24, 0.2) -15px 15px,
-  rgba(69, 13, 24, 0.1) -20px 20px,
-  rgba(69, 13, 24, 0.05) -25px 25px;
+  margin-top: 150px;
 }
 
 .fullpagecontainer {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  height: 80vh;
+  justify-content: space-between;
   align-items: center;
   min-height: 86vh;
+  background-image: url("backhand.jpg");
+  background-size: cover;
 }
 
 .icon-schema {
@@ -42,6 +39,7 @@ font-size: 20px;
   justify-content: space-around;
   align-items: flex-start;
   height: 16vh;
+  margin-bottom: 10px;
   // border: solid;
   // border-color: #18233A;
   // border-width: 1px;
@@ -62,44 +60,48 @@ font-size: 20px;
 }
 
 
-.textonimg h4 {
-  font-size: 15px;
+.textonimg h2 {
+  font-size: 30px;
   color: white;
-  width: 66%;
-  position: relative;
-  bottom: -32px;
-  font-style: italic;
-  opacity: 0.8;
+  padding: auto 3px;
+  font-weight: bolder;
 }
 
-
-.loneliness {
-  background-image: linear-gradient(347deg, rgba(2, 0, 36, 0) 15%, rgba(0, 0, 0, 1) 100%),
-  url("https://www.harvardmagazine.com/sites/default/files/img/article/1220/binder1_page_043_image_0001_sm.jpg");
-  background-size: cover;
-  height: 33vh;
-  padding: 17px;
-  border-radius: 11px;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: -20px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-  rgba(0, 0, 0, 0.12) 0px -12px 30px,
-  rgba(0, 0, 0, 0.12) 0px 4px 6px,
-  rgba(0, 0, 0, 0.17) 0px 12px 13px,
-  rgba(0, 0, 0, 0.09) 0px -3px 5px;
+.textonimg {
+  margin-top: 60px;
+  text-align: center;
 }
+// .loneliness {
+//   background-image: linear-gradient(347deg, rgba(2, 0, 36, 0) 15%, rgba(0, 0, 0, 1) 100%),
+//   url("https://media.istockphoto.com/photos/helping-hands-picture-id1163040187?k=20&m=1163040187&s=612x612&w=0&h=Fjbs3gxp3O5fkk7mVHQYIrjOsnSzlOy_LbDSZuO2hPg=");
+//   background-size: cover;
+//   height: 20vh;
+//   padding: 150px;
+//   border-radius: 11px;
+//   margin-left: 20px;
+//   margin-right: 20px;
+//   margin-top: -20px;
+//   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+//   rgba(0, 0, 0, 0.12) 0px -12px 30px,
+//   rgba(0, 0, 0, 0.12) 0px 4px 6px,
+//   rgba(0, 0, 0, 0.17) 0px 12px 13px,
+//   rgba(0, 0, 0, 0.09) 0px -3px 5px;
+// }
 
 
 .icons {
   font-size: 30px;
-  color: #18233A;
+  color: #D7DEDC;
 }
 
 .undericon-text {
   text-align: center;
   padding-top: 12px;
   font-size: 13px;
-  color: #18233A;
+  color: #D7DEDC;
   width: 75px;
+}
+
+a {
+  color: #450D18;
 }

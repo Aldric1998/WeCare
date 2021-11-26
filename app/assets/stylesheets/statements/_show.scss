@@ -17,7 +17,7 @@
   font-size: 15px;
   text-align: left;
   padding: 10px 10px 30px 10px;
-  border: 1px solid #EAEAEA;
+  border: 1px solid #050505;
   border-radius: 4px;
   background-color: white;
 }
@@ -29,6 +29,9 @@
     margin-bottom: 1rem;
     display: flex;
     flex-wrap: wrap;
+}
+.form-check-label {
+  margin-bottom: 1rem !important;
 }
 
 .statement-controller {
@@ -78,4 +81,10 @@
 }
 .statement-controller {
   min-height: 86vh;
+}
+.card-asso {
+background-color: #D7DEDC;
+margin: 10px 10px;
+padding: 40px 5px;
+border-radius: 12px;
 }
