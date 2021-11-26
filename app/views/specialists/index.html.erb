@@ -1,7 +1,3 @@
-<div class="links">
-  <p><%= link_to 'Register Specialist', new_specialist_path(@specialist), class: "btn btn-ghost"%></p>
-</div>
-
 <div class="indexcontainer">
 
   <div class="rowflexing">
@@ -14,19 +10,20 @@
       %>
       </div>
       <div>
-      <%= submit_tag "Search", class: "btn btn-primary" %>
+      <%= submit_tag "Search", class: "searchbutton" %>
       </div>
     <% end %>
   </div>
 
   <div id="map"
-        style="width: 87vw; height: 40vh; border-radius: 10px; box-shadow: 2px 2px 5px rgb(0 0 0 / 20%);"
+        style="width: 87vw; height: 40vh; border-radius: 10px; box-shadow: 2px 2px 5px rgb(0 0 0 / 20%); margin-bottom: 10px;"
         data-markers="<%= @markers.to_json %>"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
   <div class="card-specialist">
-      <% @specialists.each do |specialist| %>
+    <% @specialists.each do |specialist| %>
       <div class="box">
+         <%= link_to specialist_path(specialist) do %>
           <div class="img">
             <% if specialist.picture.attached? %>
                 <%= cl_image_tag specialist.picture.key %>
@@ -44,18 +41,16 @@
             <%= specialist.speciality.name %>
           </h2>
           <p><%= specialist.address %></p>
-          <span class="flex-column align-items-center">
-              <ul class='d-flex'>
-                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-              </ul>
-              <div class='d-flex'>
-                <%= link_to "More", specialist_path(specialist)%>
-                <%= link_to "Delete", specialist_path(specialist), method: "delete", data: { confirm: "Are you sure?" }%>
-              </div>
-          </span>
-        </div>
-      <% end %>
+          <div class="deletebutton">
+          <% if specialist.user == current_user %>
+            <%= link_to "Delete", specialist_path(specialist), method: "delete", data: { confirm: "Are you sure?" }%>
+            <% end %>
+          </div>
+          <% end %>
+
+
+
+      </div>
+    <% end %>
   </div>
 </div>
