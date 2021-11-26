@@ -17,9 +17,7 @@
           <div class="fak-fora d-none" data-btn-firstaidkit-target="content2">
             <h5>To be announced</h5>
             <hr>
-
           </div>
-
           <div class="fak-maps d-none" data-btn-firstaidkit-target="content3">
               <h5>Find a specialist in your area</h5>
               <hr>
@@ -30,30 +28,29 @@
               </div>
           </div>
       <% end %>
-      </div>
-    <%else%>
-      <% if @last_question.nil? %>
-        <%= ""%>
-      <% else %>
-        <% @statement.possible_answers.each do |possible_answer| %>
-          <div class="dropdown">
-            <p class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= possible_answer.question.content%>
-            </p>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <%= possible_answer.content%>
-            </div>
+    </div>
+  <%else%>
+    <% if @last_question.nil? %>
+      <%= ""%>
+    <% else %>
+      <% @statement.possible_answers.each do |possible_answer| %>
+        <div class="dropdown">
+          <p class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= possible_answer.question.content%>
+          </p>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <%= possible_answer.content%>
           </div>
-          <% end %>
-
+        </div>
+      <% end %>
     <% end %>
     <%=@current_question.content%>
-    <%= simple_form_for @answer do |f| %>
+    <div data-controller="card-statement">
+    <%= simple_form_for @answer,data:{card_statement_target:"form"} do |f| %>
       <%= f.hidden_field :statement_id, value: params[:id] %>
 
-      <%= f.association :possible_answer, label_method: :content, collection: PossibleAnswer.where(question: @current_question),as: :radio_buttons, input_html: {class: "category-selector"} %>
-
-      <%= f.button :submit %>
+      <%= f.association :possible_answer, label_method: :content, collection: @current_question.possible_answers ,as: :radio_buttons, input_html: {class: "category-selector", data:{action:"click->card-statement#submitForm"}} %>
     <% end %>
+    </div>
   <% end %>
 </div>

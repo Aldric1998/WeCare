@@ -11,7 +11,9 @@
 
   <div class="btn btn-flat help-button">
   <%# <p>Get Help</p> %>
-  <%= link_to "Get Help", new_statement_path %>
+  <%= simple_form_for(@statement) do |f| %>
+        <% f.submit value="Get help !" %>
+      <% end %>
   </div>
    <%# <%= link_to "Get Help", new_statement_path, class: "btn btn-flat help-button" %>
 
