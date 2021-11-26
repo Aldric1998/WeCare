@@ -49,7 +49,6 @@
   cursor: pointer;
   display: flex;
   justify-content: space-evenly !important;
-  padding: 5 5 5 5px !important;
 }
 
 .toggled-btn{
@@ -87,4 +86,8 @@ background-color: #D7DEDC;
 margin: 10px 10px;
 padding: 40px 5px;
 border-radius: 12px;
+}
+
+.btnicon {
+  width: 37px;
 }
