@@ -46,6 +46,7 @@
   cursor: pointer;
   display: flex;
   justify-content: space-evenly !important;
+  padding: 5 5 5 5px !important;
 }
 
 .toggled-btn{
@@ -76,5 +77,5 @@
 
 }
 .statement-controller {
-  height: 80vh;
+  min-height: 86vh;
 }
