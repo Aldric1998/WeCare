@@ -1,35 +1,33 @@
 <div class="statement-controller" data-controller="btn-firstaidkit">
 
-  <% if @current_question.nil? %>
-    <% @first_aid_kits.each do |kit| %>
+    <% if @current_question.nil? %>
+      <% @first_aid_kits.each do |kit| %>
 
-      <div class="toggling-btn">
-        <button id="btn1" data-action="click->btn-firstaidkit#clickbtn" data-btn-firstaidkit-target="toggledbtn"><i class="fas fa-info"></i></button>
-        <button id="btn2" data-action="click->btn-firstaidkit#clickbtn" data-btn-firstaidkit-target="toggledbtn2"><i class="far fa-comments"></i></button>
-        <button id="btn3" data-action="click->btn-firstaidkit#clickbtn" data-btn-firstaidkit-target="toggledbtn3"><i class="fas fa-map-marked-alt"></i></button>
-      </div>
-        <div class="fak-text" data-btn-firstaidkit-target="content" >
-          <h5>What to do?</h5>
-          <hr>
-          <p><%=kit.content.html_safe%></p>
+        <div class="toggling-btn">
+          <button id="btn1" data-action="click->btn-firstaidkit#clickbtn" data-btn-firstaidkit-target="toggledbtn"><i class="fas fa-info"></i></button>
+          <button id="btn2" data-action="click->btn-firstaidkit#clickbtn" data-btn-firstaidkit-target="toggledbtn2"><i class="far fa-comments"></i></button>
+          <button id="btn3" data-action="click->btn-firstaidkit#clickbtn" data-btn-firstaidkit-target="toggledbtn3"><i class="fas fa-map-marked-alt"></i></button>
         </div>
-
-        <div class="fak-fora d-none" data-btn-firstaidkit-target="content2">
-          <h5>To be announced</h5>
-          <hr>
-
-        </div>
-
-        <div class="fak-maps d-none" data-btn-firstaidkit-target="content3">
-            <h5>Find a specialist in your area</h5>
+          <div class="fak-text" data-btn-firstaidkit-target="content" >
+            <h5>What to do?</h5>
             <hr>
-            <div id="map"
-                  style="width: 100vw; height: 40vh;"
-                  data-markers="<%= @markers.to_json %>"
-                  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-            </div>
-        </div>
-    <% end %>
+            <p><%=kit.content.html_safe%></p>
+          </div>
+
+          <div class="fak-fora d-none" data-btn-firstaidkit-target="content2">
+            <h5>To be announced</h5>
+            <hr>
+          </div>
+          <div class="fak-maps d-none" data-btn-firstaidkit-target="content3">
+              <h5>Find a specialist in your area</h5>
+              <hr>
+              <div id="map"
+                    style="width: 100vw; height: 40vh;"
+                    data-markers="<%= @markers.to_json %>"
+                    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+              </div>
+          </div>
+      <% end %>
     </div>
   <%else%>
     <% if @last_question.nil? %>
