@@ -38,44 +38,30 @@
 .fak-container {
   display: flex;
   justify-content: center;
-  flex-direction: column;
   text-align: center;
 }
 
-// .btn-primary {
-//   background-color: #450D18 !important;
-//   border-color: #D7DEDC;
-// }
-
-// .btn-group {
-//   margin: 15px auto;
-// }
-.show p {
-  font-size: 12px;
-}
-
-.show h5 {
-  font-size: 14px;
-}
-.mapping-fak {
-  margin-top: 50px;
-}
-.tabs-underlined {
-  display: flex;
-  align-items: center;
-}
-
-.tabs-underlined .tab-underlined {
-  color: black;
-  padding: 8px;
-  margin: 8px 16px;
-  opacity: .4;
+.toggling-btn{
+  background-color: #D7DEDC;
+  border-color: #D7DEDC;
+  margin: auto 4px;
+  color: white;
   cursor: pointer;
-  text-decoration: none;
-  border-bottom: 4px solid transparent;
 }
 
-.tabs-underlined .tab-underlined.active {
-  opacity: 1;
-  border-bottom: 3px solid #555555;
+.toggled-btn{
+  background-color: #450D18 !important;
+  color: white ;
+}
+
+.fak-text {
+  margin-top: 20px;
+}
+
+.fak-fora {
+  margin-top: 20px;
+}
+
+.fak-maps {
+  margin-top: 20px;
 }
