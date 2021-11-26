@@ -46,6 +46,7 @@
   cursor: pointer;
   display: flex;
   justify-content: space-evenly !important;
+  padding: 5 5 5 5px !important;
 }
 
 .toggled-btn{
@@ -69,4 +70,12 @@
   margin-top: 20px;
   text-align: center;
   padding: 5px 10px;
+}
+
+.dropdown-toggle {
+  font-size: 12px;
+
+}
+.statement-controller {
+  min-height: 86vh;
 }
