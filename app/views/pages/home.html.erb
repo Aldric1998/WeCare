@@ -3,16 +3,15 @@
   <div class="loneliness">
     <%# <%= image_tag ("loneliness.jpeg") %>
     <div class="textonimg">
-    <h4>You shouldn't be alone in times of need.</h4>
+    <h2>Whathever happened, We're here, We Care</h2>
     </div>
   </div>
 
 
 
-  <div class="btn btn-flat help-button">
-  <%# <p>Get Help</p> %>
-  <%= simple_form_for(@statement) do |f| %>
-        <% f.submit value="Get help !" %>
+  <div class="btn btn-flat help-button" data-controller="card-statement" data-action="click->card-statement#submitForm">
+      <%= simple_form_for(@statement, data:{card_statement_target:"form"}) do |f| %>
+          <p>Get Help</p>
       <% end %>
   </div>
    <%# <%= link_to "Get Help", new_statement_path, class: "btn btn-flat help-button" %>
