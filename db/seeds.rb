@@ -110,15 +110,17 @@ firstaidkit_sexharas = FirstaidkitAnswer.create!(content:
 <p> Search for medical help (your own doctor or general services in hospitals) after the event. Ideally in the 24 hours after it happened, maximum in the 72 hours after.</p>
 <p><strong><i class='fas fa-phone'></i> red cross: 112 ; police: 101</strong></p>
 <p>Reason: It is important to tend to possible wounds and to be sure that no diseases were transmitted. That way you will avoid further complications. It is also the best and most effective way to collect evidence about what happened.</p>
-<strong>If you live under the same roof as the author(s) and you want to stay:</strong>
+<i class='fas fa-home'></i>
+<p><strong>If you live under the same roof as the author(s) and you want to stay:</strong></p>
 <p>Think about a place where you can go if things escalate, prepare emergency phone numbers on your phone and talk about it with people you trust.</p>
 <strong>If you live under the same roof and you want to leave:</strong>
 <p>If you do not know where to go, there are safe places provided by hospitals: <a href='https://www.seksueelgeweld.be/zorgcentra-na-seksueel-geweld-wat-voor-wie-waar'>here</a>
 Do not forget to take your personal documents (ID, passport, drivers license, health care papers) and personal property that you want to keep close to you.</p>
 
-<strong>If the case hasn’t been started yet by the prosecutor:</strong> <p>You can file a complaint at the nearest police station.</p>
-<strong>At any point: </strong> <p>you can fill in the form that you received at the police station to become a disadvantaged party in the case. That way you will be able to keep track of the case and add documents/proof to the case.</p>
-<strong>If the case already started: </strong> <p>you can make a declaration before the judge and ask to become a civil party. This means that you get all the rights to build your case and defend it in court.</p>", possible_answer_id: q3a1.id)
+<i class='fas fa-gavel'></i>
+<p>If the case hasn’t been started yet by the prosecutor: You can file a complaint at the nearest police station.</p>
+<p>At any point: you can fill in the form that you received at the police station to become a disadvantaged party in the case. That way you will be able to keep track of the case and add documents/proof to the case.</p>
+<p>If the case already started: you can make a declaration before the judge and ask to become a civil party. This means that you get all the rights to build your case and defend it in court.</p>", possible_answer_id: q3a1.id)
 firstaidkit_sexharas.specialities << specialties[0]
 firstaidkit_sexharas.specialities << specialties[2]
 firstaidkit_sexharas.specialities << specialties[3]
@@ -132,18 +134,23 @@ firstaidkit_homeburg = FirstaidkitAnswer.create!(content: "<i class='fas fa-excl
 <p>Control if the perpetrators are still on site. If yes, do not engage contact yourself, but call the police:</p>
 <p><strong><i class='fas fa-phone'></i> 101</strong></p>
 
-What you can do: note down any usefull information about what the perpetrators looked like and what they stole.
-<strong>If the perpetrators already left: make a list of all the stolen objects and damage. Take pictures of the damage and the entry point of the perpetrators. Do not clean the damage or your house untill the police can make an official statement.</strong>
-<strong>Call your insurance to make sure what is covered by them.</strong>
-<strong>If you are insured: You can file a complaint with your insurance.</strong>
+<i class='far fa-edit'></i>
+<p>note down any usefull information about what the perpetrators looked like and what they stole.</p>
+<p>If the perpetrators already left: make a list of all the stolen objects and damage. Take pictures of the damage and the entry point of the perpetrators. Do not clean the damage or your house untill the police can make an official statement.</p>
+<i class='fas fa-house-damage'></i>
+<p>Call your insurance to make sure what is covered by them.</p>
+<p>If you are insured: You can file a complaint with your insurance.</p>
 <p><a href='https://www.dvv.be/nl/verzekeringen/wonen/artikelen/wat-na-een-inbraak.html'>Any other questions?</a>", possible_answer_id: q5ha1.id )
 firstaidkit_homeburg.specialities << specialties[1]
 firstaidkit_homeburg.specialities << specialties[4]
 firstaidkit_homeburg.specialities << specialties[5]
 
 firstaidkit_roadrage = FirstaidkitAnswer.create!(content: "
-<strong><i class='fas fa-exclamation-triangle'></i> In case of physical violence: </strong> <p>Search for medical help after the event and secure the area. You can try to help the victim while you are waiting for professional help, but never put yourself in danger too.</p>
+<strong><i class='fas fa-exclamation-triangle'></i>
+<p>In case of physical violence: </p></strong>
+<p>Search for medical help after the event and secure the area. You can try to help the victim while you are waiting for professional help, but never put yourself in danger too.</p>
 <p><strong><i class='fas fa-phone'></i> red cross: 112 ; police: 101</strong></p>
+<i class='far fa-edit'></i>
 <p>Immediately start to collect evidence of what happened</p>
 <p>For example: ask other witnesses or victims if they saw something and are prepared to make a statement for the police, write down number plates, write down any usefull information about the event.</p>
 <p>Further information can be found <a href='https://www.slachtofferzorg.be/verkeersagressie'>here</a></p>", possible_answer_id: q4a1.id)

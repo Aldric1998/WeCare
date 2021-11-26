@@ -37,16 +37,15 @@
 
 .fak-container {
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   text-align: center;
 }
 
 .toggling-btn{
-  background-color: #D7DEDC;
-  border-color: #D7DEDC;
-  margin: auto 4px;
-  color: white;
+  margin: 10px 4px;
   cursor: pointer;
+  display: flex;
+  justify-content: space-evenly !important;
 }
 
 .toggled-btn{
@@ -56,14 +55,20 @@
 
 .fak-text {
   margin-top: 20px;
+  text-align: center;
+  padding: 5px 10px;
 }
 
 .fak-fora {
   margin-top: 20px;
+  text-align: center;
+  padding: 5px 10px;
 }
 
 .fak-maps {
   margin-top: 20px;
+  text-align: center;
+  padding: 5px 10px;
 }
 
 .dropdown-toggle {
