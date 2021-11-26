@@ -12,7 +12,7 @@ body {
     // transform:translate(-50%,-50%);
     // width:300px;
     min-height:400px;
-    background:#fff;
+    // background:#fff;
     box-shadow:0 20px 50px rgba(0,0,0,.1);
     border-radius:10px;
     transition:0.5s;
@@ -28,6 +28,7 @@ body {
     padding:20px;
     margin: 20px;
     border: solid;
+    border-width: 2px;
     box-sizing:border-box;
     display: flex;
     height: 350px;
@@ -90,4 +91,20 @@ body {
 @media(min-width: 1000px) {
   .card-specialist{
   }
+}
+
+.indexcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  // height: 80vh;
+  align-items: center;
+  // min-height: 86vh;
+}
+
+.rowflexing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
 }
