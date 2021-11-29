@@ -69,10 +69,7 @@
 
 }
 
-.toggled-btn{
-  background-color: #450D18 !important;
-  color: white ;
-}
+
 
 .fak-text {
   margin: 20px 30px;
@@ -96,8 +93,10 @@
 }
 
 .dropdown-toggle {
-  font-size: 12px;
+  font-size: 15px;
   padding: cover;
+  margin: 0;
+  border: 1px solid #696868;
 
 }
 .statement-controller {
@@ -127,4 +126,9 @@ border-radius: 12px;
   color: white;
   border-radius: 4px;
   margin-bottom: 10px;
+}
+.btn{
+  display: block !important;
+  text-align: left !important;
+  border-radius: 0 !important;
 }
