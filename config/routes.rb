@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   end
 
   resources :statements, only: %i[index]
+  resources :users, only: [:show]
 end

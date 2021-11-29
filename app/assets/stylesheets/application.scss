@@ -20,6 +20,7 @@
 @import "statements/index";
 @import "statements/new";
 @import "statements/show";
+@import "users/show";
 
 
 @import "simple_discussion";
@@ -84,3 +85,9 @@ body {
 //   justify-content: space-between;
 //   height: 101vh;
 // }
+
+.dropdown-menu {
+  background-color: #F5F5F5 !important;
+  color: white;
+  font-size: 12px;
+}
