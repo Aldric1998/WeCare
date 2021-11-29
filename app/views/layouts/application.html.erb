@@ -28,9 +28,9 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <%= simple_form_for(@statement) do |f| %>
+            <%= simple_form_for(Statement.new) do |f| %>
               <%= button_tag "Solve your situation", class: "btn btn-default nav-link white-link" %>
-           <% end %>
+            <% end %>
           </li>
           <li class="nav-item">
             <%= link_to "Find a specialist", specialists_path, class: "nav-link white-link" %>

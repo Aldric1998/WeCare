@@ -149,7 +149,7 @@ firstaidkit_sexharas.save!
 
 firstaidkit_homeburg = FirstaidkitAnswer.create!(content: "<i class='fas fa-exclamation-triangle'></i>
 <p>Control if the perpetrators are still on site. If yes, do not engage contact yourself, but call the police:</p>
-<p><strong><i class='fas fa-phone'></i> 101</strong></p>
+<p><strong><i class='fas fa-phone'></i>police: 101</strong></p>
 
 <i class='far fa-edit'></i>
 <p>note down any usefull information about what the perpetrators looked like and what they stole.</p>
@@ -161,7 +161,7 @@ firstaidkit_homeburg = FirstaidkitAnswer.create!(content: "<i class='fas fa-excl
 firstaidkit_homeburg.specialities << specialties[1]
 firstaidkit_homeburg.specialities << specialties[4]
 firstaidkit_homeburg.specialities << specialties[5]
-firstaidkit_homeburg.forum_category = heyy
+firstaidkit_homeburg.forum_category = heya
 firstaidkit_homeburg.save!
 
 firstaidkit_roadrage = FirstaidkitAnswer.create!(content: "
@@ -178,7 +178,7 @@ firstaidkit_roadrage.specialities << specialties[1]
 firstaidkit_roadrage.specialities << specialties[3]
 firstaidkit_roadrage.specialities << specialties[4]
 firstaidkit_roadrage.specialities << specialties[5]
-firstaidkit_roadrage.forum_category = heya
+firstaidkit_roadrage.forum_category = heyy
 firstaidkit_roadrage.save!
 
 puts "Done"
