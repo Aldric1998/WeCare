@@ -5,9 +5,15 @@
           <img src="https://cdn.icon-icons.com/icons2/1769/PNG/512/4092564-about-mobile-ui-profile-ui-user-website_114033.png">
         </div>
         <div class="cardinfo">
-          <p><strong><%= specialist.last_name %></strong> <%= specialist.first_name %></p>
-          <p><%= specialist.speciality.name%></p>
-          <p>📍 <%= specialist.address %></p>
+          <div class="insideinfo">
+            <strong><%= specialist.last_name %></strong> <%= specialist.first_name %>
+          </div>
+          <div class="insideinfo">
+            <%= specialist.speciality.name%>
+          </div>
+          <div class="insideinfo">
+            📍 <%= specialist.address %>
+          </div>
         </div>
       </div>
     <% end %>
