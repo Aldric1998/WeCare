@@ -6,6 +6,8 @@
   border-radius: 4px;
   background: #450D18;
   transition: background 0.3s ease;
+  margin-left: 22%;
+  margin-right: 15%;
 }
 
 .btn-flat p {
@@ -23,14 +25,12 @@ font-size: 20px;
   margin-top: 10px;
 }
 
-.fullpagecontainer {
-  display: flex;
+.w3-container {
+
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   min-height: 86vh;
-  background-image: url("backhand.jpg");
-  background-size: cover;
 }
 
 .icon-schema {
@@ -40,6 +40,9 @@ font-size: 20px;
   align-items: flex-start;
   height: 16vh;
   margin-bottom: 32px;
+  // border: solid;
+  // border-color: #18233A;
+  // border-width: 1px;
   border-radius: 7px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
   rgba(0, 0, 0, 0.12) 0px -12px 30px,
@@ -56,17 +59,20 @@ font-size: 20px;
   padding-top: 8px;
 }
 
-
 .textonimg h2 {
-  font-size: 30px;
-  color: white;
+  font-size: 50px;
+  color:black;
   padding: auto 3px;
   font-weight: bolder;
+
 }
 
 .textonimg {
-  margin-top: 60px;
+  margin-top: 100px;
   text-align: center;
+  margin-left: 15%;
+  margin-right: 15%;
+
 }
 
 .icons {
@@ -84,4 +90,23 @@ font-size: 20px;
 
 a {
   color: #450D18;
+}
+#photo1 {
+  background-image: url('homepage.jpg');
+  background-size: cover;
+  height: 600px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.iconcontainer {
+  height: 200px;
+  align-items: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+
+}
+
+@media(min-width: 1000px) {
+
 }

@@ -3,6 +3,8 @@
   justify-content: space-between;
   flex-wrap: wrap;
   flex-direction: row;
+  padding: 0;
+  margin: 10px;
 
 }
 .category-selector {
@@ -18,8 +20,9 @@
   text-align: left;
   padding: 10px 10px 30px 10px;
   border: 1px solid #050505;
-  border-radius: 4px;
+  border-radius: 12px;
   background-color: white;
+
 }
 .category-selector:checked + label {
   background-color: #450D18 !important;
@@ -76,6 +79,7 @@
 
 .dropdown-toggle {
   font-size: 12px;
+padding: cover;
 
 }
 .statement-controller {
@@ -84,10 +88,15 @@
 .card-asso {
 background-color: #D7DEDC;
 margin: 10px 10px;
-padding: 40px 5px;
+padding: 40px 7px;
 border-radius: 12px;
 }
 
 .btnicon {
   width: 37px;
+}
+.dropdown-menu {
+  background-color: #450D18 !important;
+  color: white ;
+  font-size: 10px;
 }
