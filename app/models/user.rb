@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   include SimpleDiscussion::ForumUser
   has_one :specialist
+  has_many :consultations
   def name
     "#{first_name} #{last_name}"
   end
