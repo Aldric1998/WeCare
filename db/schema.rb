@@ -61,6 +61,8 @@ ActiveRecord::Schema.define(version: 2021_11_29_083704) do
     t.bigint "possible_answer_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "forum_category_id"
+    t.index ["forum_category_id"], name: "index_firstaidkit_answers_on_forum_category_id"
     t.index ["possible_answer_id"], name: "index_firstaidkit_answers_on_possible_answer_id"
   end
 
