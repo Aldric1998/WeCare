@@ -16,49 +16,17 @@
 
           <div class="fak-fora d-none" data-btn-firstaidkit-target="content2">
             <h5>Talk about what happened with others</h5>
-            <hr>
-            <%= link_to 'forum', '/forum' %>
-            <%# <%if kit.forum_category(id: 80360)%>
-              <%# <%= link_to 'forum', '/forum/threads/category/Burglary' %>
-              <%# <%elsif kit.forum_category =  '/forum/threads/category/Harassment'%>
-              <%# <%= link_to 'forum', '/forum/threads/category/Harassment' %>
-              <%# <%else %>
-              <%# <%= link_to 'forum', '/forum/threads/category/Roadrage' %>
-              <%# <% end %>
+            <%= render "thread", forum_threads:  ForumThread.where(forum_category: kit.forum_category) %>
           </div>
           <div class="fak-maps d-none" data-btn-firstaidkit-target="content3">
               <h5>Find a specialist in your area</h5>
               <hr>
               <div id="map"
-                    style="width: 100vw; height: 40vh;"
+                    style="width: 100%; height: 80vh;"
                     data-markers="<%= @markers.to_json %>"
                     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
               </div>
-              <div class="card-specialist">
-                <% kit.specialists.each do |specialist| %>
-                  <div class="box">
-                    <%= link_to specialist_path(specialist) do %>
-                      <div class="img">
-                        <% if specialist.picture.attached? %>
-                            <%= cl_image_tag specialist.picture.key %>
-                        <% else %>
-                            <img src="https://cdn.icon-icons.com/icons2/1769/PNG/512/4092564-about-mobile-ui-profile-ui-user-website_114033.png">
-                        <% end %>
-                      </div>
-                      <h2>
-                        <%= specialist.first_name %> <%= specialist.last_name %>
-                        <br>
-                        <%= specialist.phonenumber %>
-                        <br>
-                        <%= specialist.email %>
-                        <br>
-                        <%= specialist.speciality.name %>
-                      </h2>
-                      <p><%= specialist.address %></p>
-                    <% end %>
-                  </div>
-                <% end %>
-              </div>
+          </div>
       <% end %>
   <%else%>
       <% if @last_question.nil? %>
