@@ -1,7 +1,13 @@
-<div class="card-cont">
-  <p><strong><%= specialist.last_name %></strong></p>
-  <p><%= specialist.first_name %></p>
-   <p><%= specialist.speciality.name%></p>
-  <p>📍 <%= specialist.address %></p>
-  <button class="text-color-white-button"><%= link_to 'Details', specialist_path(specialist.id) %></button>
-</div>
+
+    <%= link_to specialist_path(specialist.id) do %>
+      <div class ="cardcard">
+        <div class="cardimgg">
+          <img src="https://cdn.icon-icons.com/icons2/1769/PNG/512/4092564-about-mobile-ui-profile-ui-user-website_114033.png">
+        </div>
+        <div class="cardinfo">
+          <p><strong><%= specialist.last_name %></strong> <%= specialist.first_name %></p>
+          <p><%= specialist.speciality.name%></p>
+          <p>📍 <%= specialist.address %></p>
+        </div>
+      </div>
+    <% end %>
