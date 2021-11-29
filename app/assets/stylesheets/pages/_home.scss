@@ -38,8 +38,11 @@ font-size: 20px;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  height: 16vh;
-  margin-bottom: 32px;
+  height: 25vh;
+  margin: 0 auto;
+  padding-top: 5%;
+  padding-bottom: 5%;
+
   // border: solid;
   // border-color: #18233A;
   // border-width: 1px;
@@ -75,17 +78,19 @@ font-size: 20px;
 
 }
 
+
+
 .icons {
   font-size: 30px;
-  color: #D7DEDC;
+  color: #450D18;
 }
 
 .undericon-text {
   text-align: center;
-  padding-top: 12px;
-  font-size: 13px;
-  color: #D7DEDC;
-  width: 75px;
+
+  font-size: 20px;
+  color: #450D18;
+
 }
 
 a {
@@ -97,6 +102,7 @@ a {
   height: 600px;
   margin-top: 5%;
   margin-bottom: 5%;
+  border-radius: 10px;
 }
 
 .iconcontainer {
@@ -109,4 +115,28 @@ a {
 
 @media(min-width: 1000px) {
 
+}
+
+.logincontainer {
+  width: 35vw;
+  height: 75vh;
+  margin: auto;
+  padding: 20px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border: solid;
+  border-width: 1px;
+  border-radius: 7px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.forumcontainer {
+  height: 83vh;
+}
+
+.footer-copyright {
+  font-size: 18px;
 }

@@ -52,6 +52,7 @@
   cursor: pointer;
   display: flex;
   justify-content: space-evenly !important;
+
 }
 
 #btn1 {
@@ -65,12 +66,10 @@
 #btn3 {
   padding: 10px 45px;
   border-radius: 7px;
+
 }
 
-.toggled-btn{
-  background-color: #450D18 !important;
-  color: white ;
-}
+
 
 .fak-text {
   margin: 20px 30px;
@@ -95,8 +94,10 @@
 }
 
 .dropdown-toggle {
-  font-size: 12px;
-padding: cover;
+  font-size: 15px;
+  padding: cover;
+  margin: 0;
+  border: 1px solid #696868;
 
 }
 .statement-controller {
@@ -110,12 +111,14 @@ border-radius: 12px;
 }
 
 .btnicon {
+
   width: 135px;
+
 }
 .dropdown-menu {
   background-color: #450D18 !important;
   color: white ;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .colourfull {
@@ -126,14 +129,8 @@ border-radius: 12px;
   margin: 10px 15px;
   text-align: center;
 }
-
-// #imagedoor{
-//   background-image: url('opendoor.jpg');
-//   background-position: center;
-//   background-size: contain;
-//   background-repeat: no-repeat;
-//   height: 590px;
-//   width: 123vh;
-//   opacity: 0.8;
-//   border-radius: 3px;
-// }
+.btn{
+  display: block !important;
+  text-align: left !important;
+  border-radius: 0 !important;
+}
