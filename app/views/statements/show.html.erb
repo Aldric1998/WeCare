@@ -4,9 +4,11 @@
       <% @first_aid_kits.each do |kit| %>
 
         <div class="toggling-btn">
+
           <button id ="btn1" class="btnicon" data-action="click->btn-firstaidkit#clickbtn" data-btn-firstaidkit-target="toggledbtn"><i class="fas fa-info"></i></button>
           <button id ="btn2" class="btnicon" data-action="click->btn-firstaidkit#clickbtn" data-btn-firstaidkit-target="toggledbtn2"><i class="far fa-comments"></i></button>
           <button id ="btn3" class="btnicon" data-action="click->btn-firstaidkit#clickbtn" data-btn-firstaidkit-target="toggledbtn3"><i class="fas fa-map-marked-alt"></i></button>
+
         </div>
           <div class="fak-text" data-btn-firstaidkit-target="content" >
             <div class="colourfull"><h5>What to do?</h5></div>

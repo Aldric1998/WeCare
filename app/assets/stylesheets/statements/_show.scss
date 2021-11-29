@@ -52,6 +52,7 @@
   cursor: pointer;
   display: flex;
   justify-content: space-evenly !important;
+
 }
 
 #btn1 {
@@ -65,6 +66,7 @@
 #btn3 {
   padding: 10px 45px;
   border-radius: 7px;
+
 }
 
 .toggled-btn{
@@ -109,7 +111,9 @@ border-radius: 12px;
 }
 
 .btnicon {
+
   width: 135px;
+
 }
 .dropdown-menu {
   background-color: #450D18 !important;
