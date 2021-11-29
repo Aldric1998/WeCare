@@ -1,17 +1,11 @@
 .card-cont {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-color: #D7DEDC;
   border-radius: 5px;
   font-size: 10px;
-  padding: 10px;
-  border: solid;
-  border-width: 1px;
 }
 .card-cont p{
   margin: 0;
-  // text-align: center;
+  text-align: center;
 }
 .text-color-white-button {
   background-color: #450D18;
@@ -32,35 +26,4 @@
 .firstaidkit {
   justify-content:space-around;
   margin-bottom: 20px;
-}
-
-.specialistcardflex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.cardimgg {
-  width: 100px;
-}
-
-.cardimgg img {
-  width: 100%;
-  object-fit: cover;
-}
-
-.cardcard {
-  display: flex;
-  align-items: center;
-  border-radius: 5px;
-  font-size: 10px;
-  padding: 10px;
-  border: solid;
-  border-width: 1px;
-  background-color: #D7DEDC;
-}
-
-
-.cardinfo {
-  // background-color: rgb(94, 94, 85);
 }

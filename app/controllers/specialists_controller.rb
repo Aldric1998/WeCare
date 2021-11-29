@@ -21,16 +21,11 @@ class SpecialistsController < ApplicationController
   end
 
   def create
-    if current_user.admin?
-      @specialist = Specialist.new(specialist_params)
-      @specialist.user = current_user
-      @specialist.availability = true
-      @specialist.save
-      redirect_to specialist_path(@specialist)
-    else
-      flash[:alert] = 'Sorry, no admin access for you.'
-      redirect_to main_app.root_path
-    end
+    @specialist = Specialist.new(specialist_params)
+    @specialist.user = current_user
+    @specialist.availability = true
+    @specialist.save
+    redirect_to specialist_path(@specialist)
   end
 
   def show
