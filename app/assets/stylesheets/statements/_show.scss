@@ -9,21 +9,40 @@
   flex-direction: row;
   padding: 0;
   margin: 10px;
-
 }
+
+.toggling-btn{
+  margin: 10px 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-evenly !important;
+}
+
+#btn1 {
+  padding: 10px 45px;
+  border-radius: 7px;
+}
+#btn2 {
+  padding: 10px 45px;
+  border-radius: 7px;
+}
+#btn3 {
+  padding: 10px 45px;
+  border-radius: 7px;
+}
+
+.dropdown-toggle {
+  font-size: 15px;
+  padding: cover;
+  margin: 0;
+  // border: 1px solid #696868;
+}
+
 .category-selector {
   position: absolute;
   transform: scale(0);
 }
-.imagekit{
-  background-image: url('opendoorway.jpg');
-  background-size: cover;
-  height: 120vh;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  border-radius: 10px;
-  width: 90vw;
-}
+
 .category-selector + label {
   cursor: pointer;
   box-sizing: border-box;
@@ -56,33 +75,16 @@
 .fak-maps {
   text-align: center;
   min-height: 86vh;
-  margin: 5% 20px;
+  margin: 5% 15px;
 }
-.toggling-btn{
-  margin: 10px 4px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-evenly !important;
-}
-
-#btn1 {
-  padding: 10px 45px;
-  border-radius: 7px;
-}
-#btn2 {
-  padding: 10px 45px;
-  border-radius: 7px;
-}
-#btn3 {
-  padding: 10px 45px;
-  border-radius: 7px;
-}
-
-.dropdown-toggle {
-  font-size: 15px;
-  padding: cover;
-  margin: 0;
-  // border: 1px solid #696868;
+.imagekit{
+  background-image: url('opendoornew.jpg');
+  // background-size: cover;
+  // height: 120vh;
+  border-radius: 10px;
+  width: 90vw;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .statement-controller {
