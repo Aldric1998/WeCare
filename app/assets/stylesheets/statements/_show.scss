@@ -3,6 +3,8 @@
   justify-content: space-between;
   flex-wrap: wrap;
   flex-direction: row;
+  padding: 0;
+  margin: 10px;
 
 }
 .category-selector {
@@ -18,8 +20,9 @@
   text-align: left;
   padding: 10px 10px 30px 10px;
   border: 1px solid #050505;
-  border-radius: 4px;
+  border-radius: 12px;
   background-color: white;
+
 }
 .category-selector:checked + label {
   background-color: #450D18 !important;
@@ -49,7 +52,21 @@
   cursor: pointer;
   display: flex;
   justify-content: space-evenly !important;
-  padding: 5 5 5 5px !important;
+
+}
+
+#btn1 {
+  padding: 10px 45px;
+  border-radius: 7px;
+}
+#btn2 {
+  padding: 10px 45px;
+  border-radius: 7px;
+}
+#btn3 {
+  padding: 10px 45px;
+  border-radius: 7px;
+
 }
 
 .toggled-btn{
@@ -58,9 +75,11 @@
 }
 
 .fak-text {
-  margin-top: 20px;
+  margin: 20px 30px;
   text-align: center;
-  padding: 5px 10px;
+  border-radius: 3px;
+  padding: 15px 10px 65px 10px;
+  // background-color: #D7DEDC;
 }
 
 .fak-fora {
@@ -70,13 +89,15 @@
 }
 
 .fak-maps {
-  margin-top: 20px;
+  margin: 20px 30px;
   text-align: center;
   padding: 5px 10px;
+  ;
 }
 
 .dropdown-toggle {
   font-size: 12px;
+  padding: cover;
 
 }
 .statement-controller {
@@ -85,6 +106,25 @@
 .card-asso {
 background-color: #D7DEDC;
 margin: 10px 10px;
-padding: 40px 5px;
+padding: 40px 7px;
 border-radius: 12px;
+}
+
+.btnicon {
+
+  width: 135px;
+
+}
+.dropdown-menu {
+  background-color: #450D18 !important;
+  color: white ;
+  font-size: 12px;
+}
+
+.colourfull {
+  background-color: #450D18;
+  padding: 10px 10px;
+  color: white;
+  border-radius: 4px;
+  margin-bottom: 10px;
 }

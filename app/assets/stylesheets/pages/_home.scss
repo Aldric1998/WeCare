@@ -6,6 +6,8 @@
   border-radius: 4px;
   background: #450D18;
   transition: background 0.3s ease;
+  margin-left: 22%;
+  margin-right: 15%;
 }
 
 .btn-flat p {
@@ -19,18 +21,16 @@ font-size: 20px;
 }
 
 .help-button {
-  width: 36vw;
-  margin-top: 150px;
+  width: 40vw;
+  margin-top: 10px;
 }
 
-.fullpagecontainer {
-  display: flex;
+.w3-container {
+
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   min-height: 86vh;
-  background-image: url("backhand.jpg");
-  background-size: cover;
 }
 
 .icon-schema {
@@ -38,8 +38,11 @@ font-size: 20px;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  height: 16vh;
-  margin-bottom: 10px;
+  height: 25vh;
+  margin: 0 auto;
+  padding-top: 5%;
+  padding-bottom: 5%;
+
   // border: solid;
   // border-color: #18233A;
   // border-width: 1px;
@@ -59,49 +62,57 @@ font-size: 20px;
   padding-top: 8px;
 }
 
-
 .textonimg h2 {
-  font-size: 30px;
-  color: white;
+  font-size: 50px;
+  color:black;
   padding: auto 3px;
   font-weight: bolder;
+
 }
 
 .textonimg {
-  margin-top: 60px;
+  margin-top: 100px;
   text-align: center;
+  margin-left: 15%;
+  margin-right: 15%;
+
 }
-// .loneliness {
-//   background-image: linear-gradient(347deg, rgba(2, 0, 36, 0) 15%, rgba(0, 0, 0, 1) 100%),
-//   url("https://media.istockphoto.com/photos/helping-hands-picture-id1163040187?k=20&m=1163040187&s=612x612&w=0&h=Fjbs3gxp3O5fkk7mVHQYIrjOsnSzlOy_LbDSZuO2hPg=");
-//   background-size: cover;
-//   height: 20vh;
-//   padding: 150px;
-//   border-radius: 11px;
-//   margin-left: 20px;
-//   margin-right: 20px;
-//   margin-top: -20px;
-//   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-//   rgba(0, 0, 0, 0.12) 0px -12px 30px,
-//   rgba(0, 0, 0, 0.12) 0px 4px 6px,
-//   rgba(0, 0, 0, 0.17) 0px 12px 13px,
-//   rgba(0, 0, 0, 0.09) 0px -3px 5px;
-// }
+
 
 
 .icons {
   font-size: 30px;
-  color: #D7DEDC;
+  color: #450D18;
 }
 
 .undericon-text {
   text-align: center;
-  padding-top: 12px;
-  font-size: 13px;
-  color: #D7DEDC;
-  width: 75px;
+
+  font-size: 20px;
+  color: #450D18;
+
 }
 
 a {
   color: #450D18;
+}
+#photo1 {
+  background-image: url('homepage.jpg');
+  background-size: cover;
+  height: 600px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border-radius: 10px;
+}
+
+.iconcontainer {
+  height: 200px;
+  align-items: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+
+}
+
+@media(min-width: 1000px) {
+
 }

@@ -1,60 +1,55 @@
-<div class="fullpagecontainer">
 
-  <div class="loneliness">
-    <%# <%= image_tag ("loneliness.jpeg") %>
-    <div class="textonimg">
-    <h2>Whathever happened, We're here, We Care</h2>
-    </div>
-  </div>
-
-
-
-  <div class="btn btn-flat help-button" data-controller="card-statement" data-action="click->card-statement#submitForm">
+<div class="w3-container">
+  <div class="row">
+    <div class="col-12 col-lg-7">
+      <div class="textonimg">
+        <h2>Whathever happened, We're here, We Care</h2>
+        <hr>
+        <h5>We care is the first website to help the victim and witness for any penal case in Belgium. </h5>
+      </div>
+      <div class="btn btn-flat help-button" data-controller="card-statement" data-action="click->card-statement#submitForm">
       <%= simple_form_for(@statement, data:{card_statement_target:"form"}) do |f| %>
-          <p>Get Help</p>
+          <p>What can you do ?</p>
       <% end %>
-  </div>
-   <%# <%= link_to "Get Help", new_statement_path, class: "btn btn-flat help-button" %>
+      </div>
 
-  <div class="icon-schema">
-    <div class="icon-items">
-      <div class="icons">
-      <i class="far fa-edit"></i>
-      </div>
-      <div class="undericon-text">
-      Answer questions
-      </div>
+      <%# <%= link_to "Get Help", new_statement_path, class: "btn btn-flat help-button" %>
     </div>
-
-    <div class="icon-items">
-      <div class="icons">
-      <i class="fas fa-stopwatch"></i>
-      </div>
-      <div class="undericon-text">
-      One minute
-      </div>
-    </div>
-
-    <div class="icon-items">
-      <div class="icons">
-      <i class="fas fa-medkit"></i>
-      </div>
-      <div class="undericon-text">
-      Get your First Aid Kit
-      </div>
-    </div>
+    <div class="col-12 col-lg-5">
+      <div id="photo1"></div>
   </div>
 </div>
 
+<div class="iconcontainer">
+      <div class="icon-schema">
+        <div class="icon-items">
+          <div class="icons">
+          <i class="far fa-edit"></i>
+          </div>
+          <div class="undericon-text">
+          Answer questions
+          </div>
+        </div>
 
+        <div class="icon-items">
+          <div class="icons">
+          <i class="fas fa-stopwatch"></i>
+          </div>
+          <div class="undericon-text">
+          One minute
+          </div>
+        </div>
 
-
-
-
-
-
-
-
+        <div class="icon-items">
+          <div class="icons">
+          <i class="fas fa-medkit"></i>
+          </div>
+          <div class="undericon-text">
+          Get your First Aid Kit
+          </div>
+        </div>
+      </div>
+</div>
 
 <%# <i class="fas fa-medkit"></i>
 <i class="fas fa-question"></i>
