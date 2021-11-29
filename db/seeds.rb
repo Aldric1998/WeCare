@@ -1,5 +1,5 @@
 #Gems
-ForumCategory.destroy_all
+
 FirstaidkitSpecialist.destroy_all
 Specialist.destroy_all
 Speciality.destroy_all
@@ -8,7 +8,11 @@ FirstaidkitAnswer.destroy_all
 PossibleAnswer.destroy_all
 Question.destroy_all
 Statement.destroy_all
+ForumPost.destroy_all
+ForumThread.destroy_all
+ForumCategory.destroy_all
 User.destroy_all
+
 titles = ["psychologist", "insurance", "social worker", "generalist", "police", "legal expert", "non-profit association", "hospital", "psychiatrist"]
 
 first_names = ["Axel", "Raphael", "Pierre", "Alexandra", "Micheline", "Hubert", "Jean-Claude", "Marjory", "Pauline", "Augustin", "Julie", "Belle", "Marie", "José", "Miranda", "Jean", "Lucas", "Josette", "Daphnée", "Romain", "Aldric", "Nicolas", "Marianne", "Diane"]
@@ -101,14 +105,15 @@ witness", question_id: q11.id)
 puts "Done"
 
 puts "forumcat creating"
-namecategorie = ["Sexual harassment", "Roadrage", "Home burglary"]
-categorie = []
-namecategorie.each do |smth|
-  categorie << ForumCategory.create(name: smth)
-end
-ForumCategory.create!(name: "Sexual harassment", slug: "sexual harassment")
-ForumCategory.create!(name: "Roadrage", slug: "roadrage")
-ForumCategory.create!(name: "Home burglary", slug: "home burglary")
+namecategorie = ["Harassment", "Roadrage", "Burglary"]
+# categorie = []
+# namecategorie.each do |cat|
+#   categorie << ForumCategory.create!(name: cat)
+# end
+
+hey= ForumCategory.create!(name: namecategorie[0], slug: "Harassment")
+heyy= ForumCategory.create!(name: namecategorie[1], slug: "Roadrage")
+heya= ForumCategory.create!(name: namecategorie[2], slug: "Burglary")
 #---------------------------------------------------------------------------------------------------------------
 
 # FIRSTAIDKIT ANSWERS
@@ -139,7 +144,8 @@ firstaidkit_sexharas.specialities << specialties[5]
 firstaidkit_sexharas.specialities << specialties[6]
 firstaidkit_sexharas.specialities << specialties[7]
 firstaidkit_sexharas.specialities << specialties[8]
-firstaidkit_homeburg.forum_category = categorie[1]
+firstaidkit_sexharas.forum_category = hey
+firstaidkit_sexharas.save!
 
 firstaidkit_homeburg = FirstaidkitAnswer.create!(content: "<i class='fas fa-exclamation-triangle'></i>
 <p>Control if the perpetrators are still on site. If yes, do not engage contact yourself, but call the police:</p>
@@ -155,7 +161,8 @@ firstaidkit_homeburg = FirstaidkitAnswer.create!(content: "<i class='fas fa-excl
 firstaidkit_homeburg.specialities << specialties[1]
 firstaidkit_homeburg.specialities << specialties[4]
 firstaidkit_homeburg.specialities << specialties[5]
-firstaidkit_homeburg.forum_category = categorie[2]
+firstaidkit_homeburg.forum_category = heyy
+firstaidkit_homeburg.save!
 
 firstaidkit_roadrage = FirstaidkitAnswer.create!(content: "
 <strong><i class='fas fa-exclamation-triangle'></i>
@@ -171,5 +178,7 @@ firstaidkit_roadrage.specialities << specialties[1]
 firstaidkit_roadrage.specialities << specialties[3]
 firstaidkit_roadrage.specialities << specialties[4]
 firstaidkit_roadrage.specialities << specialties[5]
-firstaidkit_homeburg.forum_category = categorie[3]
+firstaidkit_roadrage.forum_category = heya
+firstaidkit_roadrage.save!
+
 puts "Done"
