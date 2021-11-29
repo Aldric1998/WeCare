@@ -2,16 +2,16 @@
 
   <div class="rowflexing">
     <div>
-    <%= form_tag specialists_path, method: :get do %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "Find a specialist"
-      %>
-      </div>
-      <div>
+      <%= form_tag specialists_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find a specialist"
+        %>
+    </div>
+    <div>
       <%= submit_tag "Search", class: "searchbutton" %>
-      </div>
+    </div>
     <% end %>
   </div>
 
@@ -43,9 +43,6 @@
             <% end %>
           </div>
           <% end %>
-
-
-
       </div>
     <% end %>
   </div>

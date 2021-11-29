@@ -1,3 +1,7 @@
+.statement-controller {
+  min-height: 86vh;
+}
+
 .form-check {
   display: flex;
   justify-content: space-between;
@@ -22,7 +26,6 @@
   border: 1px solid #050505;
   border-radius: 12px;
   background-color: white;
-
 }
 .category-selector:checked + label {
   background-color: #450D18 !important;
@@ -37,22 +40,21 @@
   margin-bottom: 1rem !important;
 }
 
-.statement-controller {
-  min-height: 86vh;
-}
-
 .fak-container {
   display: flex;
-  // justify-content: center;
   text-align: center;
+  min-height: 110vh;
 }
-
+.fak-maps {
+  text-align: center;
+  min-height: 86vh;
+  margin-top: 35px;
+}
 .toggling-btn{
   margin: 10px 4px;
   cursor: pointer;
   display: flex;
   justify-content: space-evenly !important;
-
 }
 
 #btn1 {
@@ -66,43 +68,19 @@
 #btn3 {
   padding: 10px 45px;
   border-radius: 7px;
-
-}
-
-
-
-.fak-text {
-  margin: 20px 30px;
-  text-align: center;
-  border-radius: 3px;
-  padding: 25px 15px 65px 15px;
-  // background-color: #D7DEDC;
-}
-
-.fak-fora {
-  margin-top: 35px;
-  margin-bottom: 20px;
-  text-align: -webkit-center;
-  padding: 5px 10px;
-}
-
-.fak-maps {
-  margin: 20px 40px;
-  text-align: center;
-  padding: 5px 10px;
-  ;
 }
 
 .dropdown-toggle {
   font-size: 15px;
   padding: cover;
   margin: 0;
-  border: 1px solid #696868;
-
+  // border: 1px solid #696868;
 }
+
 .statement-controller {
   min-height: 86vh;
 }
+
 .card-asso {
 background-color: #D7DEDC;
 margin: 10px 10px;
@@ -111,10 +89,9 @@ border-radius: 12px;
 }
 
 .btnicon {
-
   width: 135px;
-
 }
+
 .dropdown-menu {
   background-color: #450D18 !important;
   color: white ;
