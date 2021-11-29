@@ -116,3 +116,19 @@ a {
 @media(min-width: 1000px) {
 
 }
+
+.logincontainer {
+  width: 35vw;
+  height: 75vh;
+  margin: auto;
+  padding: 20px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border: solid;
+  border-width: 1px;
+  border-radius: 7px;
+}
+
+a:hover {
+  text-decoration: none;
+}
