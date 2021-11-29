@@ -6,26 +6,24 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 .card-specialist {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-around;
     align-items: center;
     border-radius:10px;
-    transition:0.5s;
+    margin-right: 20px;
+    margin-top: 38px;
 }
-.card-specialist:hover {
-    box-shadow:0 30px 70px rgba(0,0,0,.2);
-}
+
 .card-specialist .box {
-    text-align:center;
+    text-align: center;
     background-color: #D7DEDC;
-    border-radius: 6%;
-    margin-top: 8px;
-    margin-bottom: 8px;
+    border-radius: 8px;
+    margin: 10px;
     padding: 15px;
-    width: 87vw;
+    height: 345px;
     border: solid;
-    border-width: 2px;
+    border-width: 1px;
     box-sizing:border-box;
     display: flex;
     flex-direction: column;
@@ -45,7 +43,7 @@ body {
     height:100%;
 }
 .card-specialist .box h2 {
-    font-size:20px;
+    font-size: 14px;
     color:#262626;
     margin:20px auto;
 }
@@ -59,6 +57,7 @@ body {
 }
 .card-specialist .box p {
     color:#262626;
+    font-size: 12px;
 }
 .card-specialist .box span {
     display:inline-flex;
@@ -79,9 +78,8 @@ body {
     transition:0.5s;
     text-align:center;
 }
-.card-specialist .box ul li:hover a {
-    color:#e91e63;
-    transform:rotateY(360deg);
+.card-specialist .box a:hover {
+    text-decoration: none;
 }
 
 @media(min-width: 1000px) {
@@ -91,11 +89,13 @@ body {
 
 .indexcontainer {
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   justify-content: space-evenly;
   // height: 80vh;
-  align-items: center;
+  // align-items: center;
   // min-height: 86vh;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .rowflexing {
@@ -149,3 +149,26 @@ box-shadow 0.15s ease-in-out;
   color:#F5F5F5;
 }
 
+.mapflex {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  width: 42vw;
+  // height: 90vh;
+  // border-radius: 10px;
+  // margin: 10px;
+  position: sticky;
+  top: 30px;
+}
+
+.maptext {
+  text-align: center;
+  color: #450D18;
+  position: sticky;
+  top: 5px;
+}
+
+.maptext h2 {
+  font-size: 25px;
+}

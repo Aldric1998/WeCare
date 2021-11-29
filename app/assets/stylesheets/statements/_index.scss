@@ -41,7 +41,7 @@
 }
 
 .cardimgg {
-  width: 100px;
+  width: 50%;
 }
 
 .cardimgg img {
@@ -62,5 +62,21 @@
 
 
 .cardinfo {
-  // background-color: rgb(94, 94, 85);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90px;
+}
+
+.insideinfo {
+  font-size: 11px;
+  margin: 2px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.mapboxgl-popup-content a:hover {
+  text-decoration: none;
 }
