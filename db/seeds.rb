@@ -121,15 +121,16 @@ heya= ForumCategory.create!(name: namecategorie[2], slug: "Burglary")
 puts "Creating first aid kits"
 
 firstaidkit_sexharas = FirstaidkitAnswer.create!(content:
-"<i class='fas fa-exclamation-triangle'></i>
+"<h6> What happened can be cathegorized as Sexual Harassment</h6>
+<i class='fas fa-exclamation-triangle'></i>
 <p> Search for medical help (your own doctor or general services in hospitals) after the event. Ideally in the 24 hours after it happened, maximum in the 72 hours after.</p>
 <i class='fas fa-phone'></i>
 <p><strong>red cross: 112 ; police: 101</strong></p>
 <p>Reason: It is important to tend to possible wounds and to be sure that no diseases were transmitted. That way you will avoid further complications. It is also the best and most effective way to collect evidence about what happened.</p>
 <i class='fas fa-home'></i>
-<p><strong>If you live under the same roof as the author(s) and you want to stay:</strong></p>
+<h6>If you live under the same roof as the author(s) and you want to stay:</h6>
 <p>Think about a place where you can go if things escalate, prepare emergency phone numbers on your phone and talk about it with people you trust.</p>
-<strong>If you live under the same roof and you want to leave:</strong>
+<h6>If you live under the same roof and you want to leave:</h6>
 <p>If you do not know where to go, there are safe places provided by hospitals: <a href='https://www.seksueelgeweld.be/zorgcentra-na-seksueel-geweld-wat-voor-wie-waar'>here</a>
 Do not forget to take your personal documents (ID, passport, drivers license, health care papers) and personal property that you want to keep close to you.</p>
 
@@ -148,7 +149,9 @@ firstaidkit_sexharas.specialities << specialties[8]
 firstaidkit_sexharas.forum_category = hey
 firstaidkit_sexharas.save!
 
-firstaidkit_homeburg = FirstaidkitAnswer.create!(content: "<i class='fas fa-exclamation-triangle'></i>
+firstaidkit_homeburg = FirstaidkitAnswer.create!(content:
+"<h6> What happened can be cathegorized as Home Burglary</h6>
+<i class='fas fa-exclamation-triangle'></i>
 <p>Control if the perpetrators are still on site. If yes, do not engage contact yourself, but call the police:</p>
 <i class='fas fa-phone'></i>
 <p><strong>police: 101</strong></p>
@@ -167,8 +170,9 @@ firstaidkit_homeburg.forum_category = heya
 firstaidkit_homeburg.save!
 
 firstaidkit_roadrage = FirstaidkitAnswer.create!(content: "
-<strong><i class='fas fa-exclamation-triangle'></i>
-<p>In case of physical violence: </p></strong>
+<h6> What happened can be cathegorized as Roadrage</h6>
+<i class='fas fa-exclamation-triangle'></i>
+<h6>In case of physical violence: </h6>
 <p>Search for medical help after the event and secure the area. You can try to help the victim while you are waiting for professional help, but never put yourself in danger too.</p>
 <i class='fas fa-phone'></i>
 <p><strong>red cross: 112 ; police: 101</strong></p>
