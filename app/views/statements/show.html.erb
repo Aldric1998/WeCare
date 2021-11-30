@@ -10,25 +10,62 @@
           <button id ="btn3" class="btnicon" data-action="click->btn-firstaidkit#clickbtn" data-btn-firstaidkit-target="toggledbtn3"><i class="fas fa-map-marked-alt"></i></button>
 
         </div>
-          <div class="fak-text" data-btn-firstaidkit-target="content" >
+          <div data-btn-firstaidkit-target="content">
             <div class="colourfull"><h5>What to do?</h5></div>
-            <hr>
-            <p><%=kit.content.html_safe%></p>
-          </div>
-
-          <div class="fak-fora d-none" data-btn-firstaidkit-target="content2">
-            <div class="colourfull"><h5>Talk about what happened with others</h5></div>
-            <%= render "thread", forum_threads:  ForumThread.where(forum_category: kit.forum_category).paginate(per_page: 10, page: 1) %>
-          </div>
-          <div class="fak-maps d-none" data-btn-firstaidkit-target="content3">
-              <div class="colourfull"><h5>Find a specialist in your area</h5></div>
-              <hr>
-              <div id="map"
-                    style="width: 100%; height: 80vh;"
-                    data-markers="<%= @markers.to_json %>"
-                    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+            <div class="rowflexing">
+              <div class="indexcontainer">
+                <div class="imagekit"></div>
+                <div class="fak-maps"><p><%=kit.content.html_safe%></p> </div>
               </div>
+            </div>
           </div>
+          <div class="d-none" data-btn-firstaidkit-target="content2">
+            <div class="colourfull"><h5>Talk about what happened with others</h5></div>
+            <div class="fak-maps"><%= render "thread", forum_threads:  ForumThread.where(forum_category: kit.forum_category).paginate(per_page: 10, page: 1) %></div>
+          </div>
+          <div class="d-none" data-btn-firstaidkit-target="content3">
+              <div class="colourfull"><h5>Find a specialist in your area</h5></div>
+              <div class="rowflexing">
+                <div class="indexcontainer">
+                  <div class="card-specialist">
+                    <% @specialists.each do |specialist| %>
+                      <div class="box">
+                        <%= link_to specialist_path(specialist) do %>
+                          <div class="img">
+                            <% if specialist.picture.attached? %>
+                                <%= cl_image_tag specialist.picture.key %>
+                              <% else %>
+                                <img src="https://cdn.icon-icons.com/icons2/1769/PNG/512/4092564-about-mobile-ui-profile-ui-user-website_114033.png">
+                            <% end %>
+                          </div>
+                          <h2>
+                            <%= specialist.first_name %> <%= specialist.last_name %>
+                            <br>
+                            <%= specialist.phonenumber %>
+                            <br>
+                            <%= specialist.email %>
+                            <br>
+                            <%= specialist.speciality.name %>
+                          </h2>
+                          <p><%= specialist.address %></p>
+                          <div class="deletebutton">
+                          <% if specialist.user == current_user %>
+                            <%= link_to "Delete", specialist_path(specialist), method: "delete", data: { confirm: "Are you sure?" }%>
+                            <% end %>
+                          </div>
+                          <% end %>
+                      </div>
+                    <% end %>
+                  </div>
+                  <div class="mapflex">
+                    <div id="map"
+                            style="width: 35vw; height: 90vh; border-radius: 10px; box-shadow: 2px 2px 5px rgb(0 0 0 / 20%); margin: 10px; position: sticky; top: 50px; border: solid; border-width: 1px;"
+                            data-markers="<%= @markers.to_json %>"
+                            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+                    </div>
+                </div>
+              </div>
+            </div>
       <% end %>
   <%else%>
       <% if @last_question.nil? %>

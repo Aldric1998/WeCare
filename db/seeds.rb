@@ -123,7 +123,8 @@ puts "Creating first aid kits"
 firstaidkit_sexharas = FirstaidkitAnswer.create!(content:
 "<i class='fas fa-exclamation-triangle'></i>
 <p> Search for medical help (your own doctor or general services in hospitals) after the event. Ideally in the 24 hours after it happened, maximum in the 72 hours after.</p>
-<p><strong><i class='fas fa-phone'></i> red cross: 112 ; police: 101</strong></p>
+<i class='fas fa-phone'></i>
+<p><strong>red cross: 112 ; police: 101</strong></p>
 <p>Reason: It is important to tend to possible wounds and to be sure that no diseases were transmitted. That way you will avoid further complications. It is also the best and most effective way to collect evidence about what happened.</p>
 <i class='fas fa-home'></i>
 <p><strong>If you live under the same roof as the author(s) and you want to stay:</strong></p>
@@ -149,7 +150,8 @@ firstaidkit_sexharas.save!
 
 firstaidkit_homeburg = FirstaidkitAnswer.create!(content: "<i class='fas fa-exclamation-triangle'></i>
 <p>Control if the perpetrators are still on site. If yes, do not engage contact yourself, but call the police:</p>
-<p><strong><i class='fas fa-phone'></i>police: 101</strong></p>
+<i class='fas fa-phone'></i>
+<p><strong>police: 101</strong></p>
 
 <i class='far fa-edit'></i>
 <p>note down any usefull information about what the perpetrators looked like and what they stole.</p>
@@ -168,7 +170,8 @@ firstaidkit_roadrage = FirstaidkitAnswer.create!(content: "
 <strong><i class='fas fa-exclamation-triangle'></i>
 <p>In case of physical violence: </p></strong>
 <p>Search for medical help after the event and secure the area. You can try to help the victim while you are waiting for professional help, but never put yourself in danger too.</p>
-<p><strong><i class='fas fa-phone'></i> red cross: 112 ; police: 101</strong></p>
+<i class='fas fa-phone'></i>
+<p><strong>red cross: 112 ; police: 101</strong></p>
 <i class='far fa-edit'></i>
 <p>Immediately start to collect evidence of what happened</p>
 <p>For example: ask other witnesses or victims if they saw something and are prepared to make a statement for the police, write down number plates, write down any usefull information about the event.</p>

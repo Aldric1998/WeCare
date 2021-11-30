@@ -1,3 +1,7 @@
+.statement-controller {
+  min-height: 86vh;
+}
+
 .form-check {
   display: flex;
   justify-content: space-between;
@@ -5,8 +9,35 @@
   flex-direction: row;
   padding: 0;
   margin: 10px;
-
 }
+
+.toggling-btn{
+  margin: 10px 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-evenly !important;
+}
+
+#btn1 {
+  padding: 10px 45px;
+  border-radius: 7px;
+}
+#btn2 {
+  padding: 10px 45px;
+  border-radius: 7px;
+}
+#btn3 {
+  padding: 10px 45px;
+  border-radius: 7px;
+}
+
+.dropdown-toggle {
+  font-size: 15px;
+  padding: cover;
+  margin: 0;
+  // border: 1px solid #696868;
+}
+
 .category-selector {
   position: absolute;
   transform: scale(0);
@@ -22,7 +53,6 @@
   border: 1px solid #050505;
   border-radius: 12px;
   background-color: white;
-
 }
 .category-selector:checked + label {
   background-color: #450D18 !important;
@@ -37,81 +67,39 @@
   margin-bottom: 1rem !important;
 }
 
-.statement-controller {
-  min-height: 86vh;
-}
-
 .fak-container {
   display: flex;
-  // justify-content: center;
   text-align: center;
+  min-height: 110vh;
 }
-
-.toggling-btn{
-  margin: 10px 4px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-evenly !important;
-
-}
-
-#btn1 {
-  padding: 10px 45px;
-  border-radius: 7px;
-}
-#btn2 {
-  padding: 10px 45px;
-  border-radius: 7px;
-}
-#btn3 {
-  padding: 10px 45px;
-  border-radius: 7px;
-
-}
-
-
-
-.fak-text {
-  margin: 20px 30px;
-  text-align: center;
-  border-radius: 3px;
-  padding: 15px 10px 65px 10px;
-  // background-color: #D7DEDC;
-}
-
-.fak-fora {
-  margin-top: 20px;
-  text-align: center;
-  padding: 5px 10px;
-}
-
 .fak-maps {
-  margin: 20px 30px;
   text-align: center;
-  padding: 5px 10px;
-  ;
+  min-height: 86vh;
+  margin: 5% 15px;
+}
+.imagekit{
+  background-image: url('opendoornew.jpg');
+  // background-size: cover;
+  // height: 120vh;
+  border-radius: 10px;
+  width: 90vw;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-.dropdown-toggle {
-  font-size: 15px;
-  padding: cover;
-  margin: 0;
-  border: 1px solid #696868;
-
-}
 .statement-controller {
   min-height: 86vh;
 }
+
 .card-asso {
   padding: 75px 0;
   display: flex;
 }
 
 .btnicon {
-
   width: 135px;
-
 }
+
 .dropdown-menu {
   background-color: #450D18 !important;
   color: white ;
@@ -123,7 +111,8 @@
   padding: 10px 10px;
   color: white;
   border-radius: 4px;
-  margin-bottom: 10px;
+  margin: 10px 15px;
+  text-align: center;
 }
 .btn{
   display: block !important;

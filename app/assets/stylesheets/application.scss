@@ -35,6 +35,9 @@ body {
 .navbar-lewagon {
   justify-content: space-between;
   background: #18233A;
+  position: sticky !important;
+  top: 0px;
+  z-index: 300;
 }
 .white-link {
   color: #D7DEDC !important;
