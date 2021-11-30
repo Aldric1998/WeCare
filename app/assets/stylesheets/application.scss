@@ -86,7 +86,7 @@
 // }
 
 .dropdown-menu {
-  background-color: #F5F5F5 !important;
+  background-color: #F5F5F5 ;
   color: white;
   font-size: 12px;
 }
@@ -101,4 +101,8 @@ h6 {
 h3 {
   font-weight: normal !important;
   font-size: 37px !important;
+}
+
+.forumcontainer {
+  min-height: 89vh !important;
 }
