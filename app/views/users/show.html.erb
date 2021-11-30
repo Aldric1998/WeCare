@@ -3,8 +3,9 @@
     <% @consultations.each do |consultation|  %>
       <div class="card">
         <a href="#">
-          <div class="price"><%= consultation.specialist.first_name %><span class="glyphicon glyphicon-eur" aria-hidden="true"></span> <%= consultation.specialist.last_name %> </div>
           <div class="image"></div>
+          <div class="price"><%= consultation.specialist.first_name %><span class="glyphicon glyphicon-eur" aria-hidden="true"></span> <%= consultation.specialist.last_name %> </div>
+          <div class="deletethebutton"><%= link_to "Cancel", user_path(current_user), method: "delete", data: { confirm: "Are you sure?" }%></div>
           <div class="description">
               <div class="row">
                 <div class="col-sm-3"><h4><%= @user.first_name %> <%= @user.last_name %></h4></div>
@@ -21,4 +22,4 @@
       </div>
     <% end %>
   </div>
-<a style="font-size: 8pt; text-decoration: none" target="_blank"</a>
+<a style="font-size: 8pt; text-decoration: none" target="_blank"></a>
