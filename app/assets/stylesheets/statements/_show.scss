@@ -97,10 +97,8 @@ color: white ;
 }
 
 .card-asso {
-background-color: #D7DEDC;
-margin: 10px 10px;
-padding: 40px 7px;
-border-radius: 12px;
+  padding: 75px 0;
+  display: flex;
 }
 
 .btnicon {
@@ -130,4 +128,28 @@ border-radius: 12px;
 
 .new-card-specialist {
   margin-top: 0px !important;
+}
+
+.container-asso {
+  width: 1100px;
+  background: #D7DEDC;
+  margin: 0 auto;
+
+  border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -o-border-radius: 20px;
+    -ms-border-radius: 20px;
+}
+
+.main {
+  padding: 80px 0;
+}
+
+
+
+.content {
+    margin-left: 75px;
+    margin-right: 75px;
+    padding-left: 34px;
 }
