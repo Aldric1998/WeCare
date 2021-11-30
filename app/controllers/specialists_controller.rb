@@ -26,7 +26,7 @@ class SpecialistsController < ApplicationController
       @specialist.availability = true
       @specialist.visibility = false
       @specialist.save
-      redirect_to specialist_path(@specialist)
+      redirect_to specialists_path
   end
 
   def show
