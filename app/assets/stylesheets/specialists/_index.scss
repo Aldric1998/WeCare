@@ -12,7 +12,7 @@ body {
     align-items: center;
     border-radius:10px;
     margin-right: 20px;
-    margin-top: 38px;
+    margin-top: 34px;
 }
 
 .card-specialist .box {
@@ -94,7 +94,7 @@ body {
   // height: 80vh;
   // align-items: center;
   // min-height: 86vh;
-  width: 100%;
+  width: 97%;
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -124,6 +124,15 @@ transition: color 0.15s ease-in-out,
 background-color 0.15s ease-in-out,
 border-color 0.15s ease-in-out,
 box-shadow 0.15s ease-in-out;
+}
+
+.searchbutton:hover {
+  text-decoration: none;
+}
+
+:hover {
+  color: inherit;
+  text-decoration: none;
 }
 
 .deletebutton {
@@ -165,11 +174,11 @@ box-shadow 0.15s ease-in-out;
 
 .maptext {
   text-align: center;
-  color: #450D18;
+  color: #18233A;
   position: sticky;
-  top: 5px;
+  top: 60px;
 }
 
 .maptext h2 {
-  font-size: 25px;
+  font-size: 20px;
 }
