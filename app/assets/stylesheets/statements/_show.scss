@@ -11,11 +11,15 @@
   margin: 10px;
 }
 
-.toggling-btn{
+.toggling-btn {
   margin: 10px 4px;
   cursor: pointer;
   display: flex;
   justify-content: space-evenly !important;
+}
+.toggled-btn {
+background-color: #450D18 !important;
+color: white ;
 }
 
 #btn1 {
@@ -76,13 +80,14 @@
   text-align: center;
   min-height: 86vh;
   margin: 5% 15px;
+  padding-left: 30px;
 }
 .imagekit{
   background-image: url('opendoornew.jpg');
   // background-size: cover;
   // height: 120vh;
-  border-radius: 10px;
-  width: 90vw;
+  // border-radius: 10px;
+  width: 1323px;
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -118,6 +123,11 @@
   display: block !important;
   text-align: left !important;
   border-radius: 0 !important;
+  border: 0 !important;
+}
+
+.new-card-specialist {
+  margin-top: 0px !important;
 }
 
 .container-asso {

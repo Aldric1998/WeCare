@@ -25,10 +25,6 @@
 
 @import "simple_discussion";
 
-body {
-  background-color: #F5F5F5;
-
-}
 .container {
   min-height: 100vh;
 }
@@ -93,4 +89,16 @@ body {
   background-color: #F5F5F5 !important;
   color: white;
   font-size: 12px;
+}
+
+h6 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #450D18;
+}
+
+h3 {
+  font-weight: normal !important;
+  font-size: 37px !important;
 }
