@@ -21,6 +21,7 @@
 @import "statements/new";
 @import "statements/show";
 @import "users/show";
+@import "pages/dashboard";
 
 
 @import "simple_discussion";
@@ -86,7 +87,7 @@
 // }
 
 .dropdown-menu {
-  background-color: #F5F5F5 !important;
+  background-color: #F5F5F5 ;
   color: white;
   font-size: 12px;
 }
