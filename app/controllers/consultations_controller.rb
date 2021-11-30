@@ -11,7 +11,7 @@ class ConsultationsController < ApplicationController
     @consultation.specialist = @specialist
     # @consultation.availability = false
     if @consultation.save!
-      redirect_to user_path(current_user)
+      redirect_to dashboard_path
     else
       redirect_to specialist_path(@specialist)
     end

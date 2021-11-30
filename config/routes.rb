@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   mount SimpleDiscussion::Engine => "/forum"
-
+  get "pages/dashboard", to: "pages#dashboard", as: :dashboard
   resources :statements, only: [:show,:edit,:new,:create]
 
   resources :answers, only: %i[index show create]
@@ -13,5 +13,5 @@ Rails.application.routes.draw do
   end
 
   resources :statements, only: %i[index]
-  resources :users, only: [:show]
+
 end
