@@ -45,6 +45,7 @@ puts "Done"
 
 #---------------------------------------------------------------------------------------------------------------
 User.create!(first_name: "wecare", last_name: "wecare", email: "a@a.com", password: "azerty")
+User.create!(first_name: "admin", last_name: "admin", email: "b@b.com", password: "azerty", admin: true)
 
 puts "Creating questions"
 #SEXUAL HARRASSMENT QUESTIONS

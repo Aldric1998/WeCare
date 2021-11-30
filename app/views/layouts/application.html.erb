@@ -43,8 +43,10 @@
             <%= link_to "Forum", simple_discussion_path, class: "dropdown-item" %>
             <%  if user=current_user %>
               <%= link_to "Dashboard", dashboard_path, class: "dropdown-item" %>
+              <%= link_to "Admin Dashboard", rails_admin_path, class: "dropdown-item" if current_user.admin? %>
               <%= link_to "Sign out", destroy_user_session_path, method: :delete,
                   data: { confirm: "Are you sure?" }, class: "dropdown-item" %>
+
             <% else %>
               <%= link_to "Login", new_user_session_path, class: "dropdown-item" %>
             <% end %>
@@ -55,6 +57,7 @@
     </div>
 
     <%= yield %>
+
     <%= render 'shared/flashes' %>
     <div class="footer">
       <div class="footer-links">
