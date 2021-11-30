@@ -123,6 +123,20 @@ a {
   border: solid;
   border-width: 1px;
   border-radius: 7px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.signupcontainer {
+  width: 35vw;
+  // height: 75vh;
+  margin: auto;
+  padding: 20px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border: solid;
+  border-width: 1px;
+  border-radius: 7px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 a:hover {

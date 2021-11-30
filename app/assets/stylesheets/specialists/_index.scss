@@ -125,6 +125,15 @@ border-color 0.15s ease-in-out,
 box-shadow 0.15s ease-in-out;
 }
 
+.searchbutton:hover {
+  text-decoration: none;
+}
+
+:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
 .deletebutton {
   display: inline-block;
   font-weight: 400;
