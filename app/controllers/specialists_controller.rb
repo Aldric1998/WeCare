@@ -2,9 +2,9 @@ class SpecialistsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :index]
   def index
     if params[:query].present?
-      @specialists = Specialist.global_search(params[:query])
+      @specialists = Specialist.global_search(params[:query]).where(visibility: true)
     else
-      @specialists = Specialist.all
+      @specialists = Specialist.all.where(visibility: true)
     end
 
     @markers = @specialists.geocoded.map do |specialist|
@@ -21,16 +21,12 @@ class SpecialistsController < ApplicationController
   end
 
   def create
-    if current_user.admin?
       @specialist = Specialist.new(specialist_params)
       @specialist.user = current_user
       @specialist.availability = true
+      @specialist.visibility = false
       @specialist.save
       redirect_to specialist_path(@specialist)
-    else
-      flash[:alert] = 'Sorry, no admin access for you.'
-      redirect_to main_app.root_path
-    end
   end
 
   def show
@@ -48,6 +44,6 @@ class SpecialistsController < ApplicationController
   private
 
   def specialist_params
-    params.require(:specialist).permit(:first_name, :last_name, :speciality_id, :address, :phonenumber, :email, :availability, :picture)
+    params.require(:specialist).permit(:first_name, :last_name, :speciality_id, :address, :phonenumber, :email, :availability, :picture, :visibility)
   end
 end
