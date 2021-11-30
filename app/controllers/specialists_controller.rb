@@ -21,12 +21,12 @@ class SpecialistsController < ApplicationController
   end
 
   def create
-      @specialist = Specialist.new(specialist_params)
-      @specialist.user = current_user
-      @specialist.availability = true
-      @specialist.visibility = false
-      @specialist.save
-      redirect_to specialists_path
+    @specialist = Specialist.new(specialist_params)
+    @specialist.user = current_user
+    @specialist.availability = true
+    @specialist.visibility = false
+    @specialist.save
+    redirect_to specialists_path
   end
 
   def show
