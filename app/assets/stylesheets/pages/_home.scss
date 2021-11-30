@@ -6,8 +6,8 @@
   border-radius: 4px;
   background: #450D18;
   transition: background 0.3s ease;
-  margin-left: 22%;
-  margin-right: 15%;
+  // margin-left: 22%;
+  // margin-right: 15%;
 }
 
 .btn-flat p {
@@ -21,8 +21,8 @@ font-size: 20px;
 }
 
 .help-button {
-  margin-top: 76px;
-  text-align: center;
+  width: 30vw;
+  margin-top: 40px;
 }
 
 .w3-container {
@@ -34,10 +34,10 @@ font-size: 20px;
 }
 
 .icon-schema {
-  width: 90%;
+  width: 60%;
   display: flex;
   justify-content: space-around;
-  align-items: flex-start;
+  align-items: center;
   height: 25vh;
   margin: 0 auto;
   padding-top: 5%;
@@ -78,13 +78,14 @@ font-size: 20px;
 
 .icons {
   font-size: 30px;
-  color: #450D18;
+  color: #18233A;
 }
 
 .undericon-text {
   text-align: center;
   font-size: 20px;
-  color: #450D18;
+  color: #18233A;
+
 }
 
 a {
@@ -96,7 +97,8 @@ a {
   height: 600px;
   margin-top: 5%;
   margin-bottom: 5%;
-  border-radius: 10px;
+  border-radius: 10px 0 0 10px;
+  ;
 }
 
 .iconcontainer {
@@ -133,4 +135,15 @@ a:hover {
 
 .footer-copyright {
   font-size: 18px;
+}
+
+.columnflexing {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+}
+
+.columnflexing p {
+  text-align: center;
 }
