@@ -3,4 +3,10 @@ class PagesController < ApplicationController
   def home
     @statement = Statement.new
   end
+
+  def dashboard
+    @user = current_user
+    @consultations = Consultation.where(id: @user.consultations)
+  end
+
 end
