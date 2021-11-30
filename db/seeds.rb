@@ -13,7 +13,7 @@ ForumThread.destroy_all
 ForumCategory.destroy_all
 User.destroy_all
 
-titles = ["psychologist", "insurance", "social worker", "generalist", "police", "legal expert", "non-profit association", "hospital", "psychiatrist"]
+titles = ["Psychologist", "Insurance", "Social worker", "Generalist", "Police", "Lawyer", "Non-profit association", "Hospital", "Psychiatrist"]
 
 first_names = ["Axel", "Raphael", "Pierre", "Alexandra", "Micheline", "Hubert", "Jean-Claude", "Marjory", "Pauline", "Augustin", "Julie", "Belle", "Marie", "José", "Miranda", "Jean", "Lucas", "Josette", "Daphnée", "Romain", "Aldric", "Nicolas", "Marianne", "Diane"]
 
@@ -45,10 +45,11 @@ puts "Done"
 
 #---------------------------------------------------------------------------------------------------------------
 User.create!(first_name: "wecare", last_name: "wecare", email: "a@a.com", password: "azerty")
+User.create!(first_name: "admin", last_name: "admin", email: "b@b.com", password: "azerty", admin: true)
 
 puts "Creating questions"
 #SEXUAL HARRASSMENT QUESTIONS
-preq = Question.create!(content: "Are you a witness or the victim?", position: 1)
+preq = Question.create!(content: "Are you a witness or a victim?", position: 1)
 q1 = Question.create!(content: "What happened was mainly caused by?", position: 2)
 q2 = Question.create!(content: "The original goal of the action caused mainly?", position: 3)
 q3 = Question.create!(content: "The physical damage was?", position: 4)
@@ -99,7 +100,7 @@ q4ra1 = PossibleAnswer.create!(content: "Road rage", question_id: q9.id, next_po
 q5ra1 = PossibleAnswer.create!(content: "Agression", question_id: q10.id)
 q5ra3 = PossibleAnswer.create!(content: "Assault", question_id: q10.id)
 q6ra1 = PossibleAnswer.create!(content: "You saw what happened", question_id: q11.id, next_position: 2)
-q6ra1 = PossibleAnswer.create!(content: "you know somebody who was a
+q6ra1 = PossibleAnswer.create!(content: "You know somebody who was a
 witness", question_id: q11.id)
 
 puts "Done"

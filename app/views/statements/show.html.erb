@@ -59,7 +59,7 @@
                   </div>
                   <div class="mapflex">
                     <div id="map"
-                            style="width: 35vw; height: 90vh; border-radius: 10px; box-shadow: 2px 2px 5px rgb(0 0 0 / 20%); margin: 10px; position: sticky; top: 50px; border: solid; border-width: 1px;"
+                            style="width: 35vw; height: 85vh; border-radius: 10px; box-shadow: 2px 2px 5px rgb(0 0 0 / 20%); margin: 10px; position: sticky; top: 80px; border: solid; border-width: 1px;"
                             data-markers="<%= @markers.to_json %>"
                             data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
                     </div>
@@ -73,11 +73,10 @@
       <% else %>
         <% @statement.possible_answers.each do |possible_answer| %>
           <div class="dropdown">
-            <p class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <p class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <%= possible_answer.question.content%>
-
             </p>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <div class="dropdown-menu poss" aria-labelledby="dropdownMenuButton">
               <%= possible_answer.content%>
             </div>
           </div>
