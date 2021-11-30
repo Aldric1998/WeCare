@@ -9,7 +9,9 @@
           <h5>We care is the first website that helps victims and witnesses for any criminal case in Belgium. </h5>
         </div>
         <hr>
-        <div class="btn btn-flat help-button" data-controller="card-statement" data-action="click->card-statement#submitForm">
+        <h5>We care is the first website that helps victims and witnesses for any criminal case in Belgium. </h5>
+
+        <div class="btn-flat help-button" data-controller="card-statement" data-action="click->card-statement#submitForm">
         <%= simple_form_for(@statement, data:{card_statement_target:"form"}) do |f| %>
             <p>What can you do ?</p>
         <% end %>
