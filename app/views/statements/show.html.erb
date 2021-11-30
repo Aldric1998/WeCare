@@ -5,9 +5,9 @@
 
         <div class="toggling-btn">
 
-          <button id ="btn1" class="btnicon" data-action="click->btn-firstaidkit#clickbtn" data-btn-firstaidkit-target="toggledbtn"><i class="fas fa-info"></i></button>
-          <button id ="btn2" class="btnicon" data-action="click->btn-firstaidkit#clickbtn" data-btn-firstaidkit-target="toggledbtn2"><i class="far fa-comments"></i></button>
-          <button id ="btn3" class="btnicon" data-action="click->btn-firstaidkit#clickbtn" data-btn-firstaidkit-target="toggledbtn3"><i class="fas fa-map-marked-alt"></i></button>
+          <button id ="btn1" class="btnicon" data-action="click->btn-firstaidkit#clickbtn" data-btn-firstaidkit-target="toggledbtn" type="checkbox"><i class="fas fa-info"></i></button>
+          <button id ="btn2" class="btnicon" data-action="click->btn-firstaidkit#clickbtn" data-btn-firstaidkit-target="toggledbtn2" type="checkbox"><i class="far fa-comments"></i></button>
+          <button id ="btn3" class="btnicon" data-action="click->btn-firstaidkit#clickbtn" data-btn-firstaidkit-target="toggledbtn3" type="checkbox"><i class="fas fa-map-marked-alt"></i></button>
 
         </div>
           <div data-btn-firstaidkit-target="content">
@@ -27,7 +27,7 @@
               <div class="colourfull"><h5>Find a specialist in your area</h5></div>
               <div class="rowflexing">
                 <div class="indexcontainer">
-                  <div class="card-specialist">
+                  <div class="card-specialist new-card-specialist">
                     <% @specialists.each do |specialist| %>
                       <div class="box">
                         <%= link_to specialist_path(specialist) do %>
@@ -83,15 +83,26 @@
           </div>
         <% end %>
       <% end %>
-      <div class="card-asso">
-        <h3><strong><%=@current_question.content%></strong></h3>
-        <div data-controller="card-statement">
-        <hr>
-          <%= simple_form_for @answer,data:{card_statement_target:"form"} do |f| %>
-            <%= f.hidden_field :statement_id, value: params[:id] %>
-            <%= f.association :possible_answer, label_method: :content, collection: @current_question.possible_answers ,as: :radio_buttons, input_html: {class: "category-selector", data:{action:"click->card-statement#submitForm"}} %>
-          <% end %>
-        </div>
+      <div class="main">
+        <section class="current-question">
+          <div class="container-asso">
+            <div class="card-asso">
+              <div class="content">
+                <h3><strong><%=@current_question.content%></strong></h3>
+                <div data-controller="card-statement">
+                <hr>
+                  <%= simple_form_for @answer,data:{card_statement_target:"form"} do |f| %>
+                    <%= f.hidden_field :statement_id, value: params[:id] %>
+                    <%= f.association :possible_answer, label_method: :content, collection: @current_question.possible_answers ,as: :radio_buttons, input_html: {class: "category-selector", data:{action:"click->card-statement#submitForm"}} %>
+                  <% end %>
+                </div>
+              </div>
+              <div class="content-image">
+                <img src="<%= image_path("bubble5.png")%>">
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
   <% end %>
 </div>
