@@ -5,7 +5,7 @@
         <a href="#">
           <div class="image"></div>
           <div class="price"><%= consultation.specialist.first_name %><span class="glyphicon glyphicon-eur" aria-hidden="true"></span> <%= consultation.specialist.last_name %> </div>
-          <div class="deletethebutton"><%= link_to "Cancel", dashboard_path, method: "delete", data: { confirm: "Are you sure?" }%></div>
+          <div class="deletethebutton"><%= link_to "Cancel", consultation_path(consultation), method: "delete", data: { confirm: "Are you sure?" }%></div>
           <div class="description">
               <div class="row">
                 <div class="col-sm-3"><h4><%= @user.first_name %> <%= @user.last_name %></h4></div>
