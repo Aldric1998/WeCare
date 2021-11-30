@@ -103,10 +103,8 @@
   min-height: 86vh;
 }
 .card-asso {
-background-color: #D7DEDC;
-margin: 10px 10px;
-padding: 40px 7px;
-border-radius: 12px;
+  padding: 75px 0;
+  display: flex;
 }
 
 .btnicon {
@@ -131,4 +129,31 @@ border-radius: 12px;
   display: block !important;
   text-align: left !important;
   border-radius: 0 !important;
+}
+
+.container-asso {
+  width: 1000px;
+  background: #D7DEDC;
+  margin: 0 auto;
+
+  border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -o-border-radius: 20px;
+    -ms-border-radius: 20px;
+}
+
+.main {
+  padding: 150px 0;
+}
+
+#photo3 {
+  background-image: url('content-image.png');
+  max-width: 100%;
+  height: auto;
+}
+.content {
+    margin-left: 75px;
+    margin-right: 75px;
+    padding-left: 34px;
 }
