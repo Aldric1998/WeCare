@@ -13,7 +13,7 @@ export default class extends Controller {
     // this.contentTarget.classList.remove("d-none")
     // console.log(event.currentTarget.id, this.contentTarget)
     if (event.currentTarget.id == "btn1") {
-      this.contentTarget.classList.toggle("d-none")
+      this.contentTarget.classList.remove("d-none")
       this.toggledbtnTarget.classList.add("toggled-btn")
       this.toggledbtn2Target.classList.remove("toggled-btn")
       this.toggledbtn3Target.classList.remove("toggled-btn")
@@ -21,7 +21,7 @@ export default class extends Controller {
       this.content3Target.classList.add("d-none")
     }
     else if (event.currentTarget.id == "btn2") {
-      this.content2Target.classList.toggle("d-none")
+      this.content2Target.classList.remove("d-none")
       this.toggledbtn2Target.classList.add("toggled-btn")
       this.toggledbtnTarget.classList.remove("toggled-btn")
       this.toggledbtn3Target.classList.remove("toggled-btn")
@@ -30,7 +30,7 @@ export default class extends Controller {
     }
 
     else if (event.currentTarget.id == "btn3") {
-      this.content3Target.classList.toggle("d-none")
+      this.content3Target.classList.remove("d-none")
       this.toggledbtn3Target.classList.add("toggled-btn")
       this.toggledbtnTarget.classList.remove("toggled-btn")
       this.toggledbtn2Target.classList.remove("toggled-btn")
