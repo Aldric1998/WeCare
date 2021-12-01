@@ -30,7 +30,6 @@ emails = ["Axel@gmail.com", "Raphael@gmail.com", "Pierre@gmail.com", "Hubert@gma
 
 #---------------------------------------------------------------------------------------------------------------
 
-
 specialties = []
 titles.each do |title|
   specialties << Speciality.create(name: title)
@@ -138,7 +137,7 @@ Do not forget to take your personal documents (ID, passport, drivers license, he
 <i class='fas fa-gavel'></i>
 <p>If the case hasn’t been started yet by the prosecutor: You can file a complaint at the nearest police station.</p>
 <p>At any point: you can fill in the form that you received at the police station to become a disadvantaged party in the case. That way you will be able to keep track of the case and add documents/proof to the case.</p>
-<p>If the case already started: you can make a declaration before the judge and ask to become a civil party. This means that you get all the rights to build your case and defend it in court.</p>", possible_answer_id: q3a1.id)
+<p>If the case already started: you can make a declaration before the judge and ask to become a civil party. This means that you get all the rights to build your case and defend it in court.</p>", file: 'https://drive.google.com/file/d/1hh-F4L77VL1atyEJsKQEcvCzxX8Z9O3c/view?usp=sharing',possible_answer_id: q3a1.id)
 firstaidkit_sexharas.specialities << specialties[0]
 firstaidkit_sexharas.specialities << specialties[2]
 firstaidkit_sexharas.specialities << specialties[3]
@@ -163,7 +162,7 @@ firstaidkit_homeburg = FirstaidkitAnswer.create!(content:
 <i class='fas fa-house-damage'></i>
 <p>Call your insurance to make sure what is covered by them.</p>
 <p>If you are insured: You can file a complaint with your insurance.</p>
-<p><a href='https://www.dvv.be/nl/verzekeringen/wonen/artikelen/wat-na-een-inbraak.html'>Any other questions?</a>", possible_answer_id: q5ha1.id )
+<p><a href='https://www.dvv.be/nl/verzekeringen/wonen/artikelen/wat-na-een-inbraak.html'>Any other questions?</a>", file: 'https://drive.google.com/file/d/1ZmFcs94IaLF9iTQ918zTDi_dfcclp74k/view?usp=sharing' ,possible_answer_id: q5ha1.id )
 firstaidkit_homeburg.specialities << specialties[1]
 firstaidkit_homeburg.specialities << specialties[4]
 firstaidkit_homeburg.specialities << specialties[5]
@@ -180,7 +179,7 @@ firstaidkit_roadrage = FirstaidkitAnswer.create!(content: "
 <i class='far fa-edit'></i>
 <p>Immediately start to collect evidence of what happened</p>
 <p>For example: ask other witnesses or victims if they saw something and are prepared to make a statement for the police, write down number plates, write down any usefull information about the event.</p>
-<p>Further information can be found <a href='https://www.slachtofferzorg.be/verkeersagressie'>here</a></p>", possible_answer_id: q4a1.id)
+<p>Further information can be found <a href='https://www.slachtofferzorg.be/verkeersagressie'>here</a></p>", file: 'https://drive.google.com/file/d/1_Tq41lAZ4ZWchaYVFrXbGXULkDF_grIL/view?usp=sharing',possible_answer_id: q4a1.id)
 firstaidkit_roadrage.specialities << specialties[0]
 firstaidkit_roadrage.specialities << specialties[1]
 firstaidkit_roadrage.specialities << specialties[3]
