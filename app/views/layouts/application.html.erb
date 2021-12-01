@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>WeCare</title>
+    <title>We Care - Whatever happened, we're here, We Care.</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    <%= favicon_link_tag %>
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -18,7 +21,10 @@
   <body>
     <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
       <%= link_to root_path, class: "navbar-brand" do %>
-        <i class="fas fa-gavel white-link"> <strong>We Care</strong></i>
+        <div class="white-link">
+          <img src="<%= image_path("nav.png")%>">
+          <strong>We Care</strong>
+        </div>
     <% end %>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-bars white-link"></i>
