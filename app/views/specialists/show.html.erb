@@ -25,8 +25,8 @@
       <hr>
 
       <%= simple_form_for [ @specialist, @consultation ] do |f| %>
-        <%= f.input :start_time, as: :string, required: false, input_html: {class: "datepicker"} %>
-        <%= f.input :end_time, as: :string, required: false, input_html: {class: "datepicker"} %>
+        <%= f.input :start_time, as: :string, required: false, input_html: {class: "datepicker", "data-disabled-date-start" => @specialist.consultations.map(&:start_time).to_json, "data-disabled-date-end" => @specialist.consultations.map(&:end_time).to_json}%>
+        <%= f.input :end_time, as: :string, required: false, input_html: {class: "datepicker", "data-disabled-date-start" => @specialist.consultations.map(&:start_time).to_json , "data-disabled-date-end" => @specialist.consultations.map(&:end_time).to_json}%>
         <%= f.button :submit, "Submit", class: "searchbutton" %>
       <% end %>
     </div>
