@@ -20,11 +20,11 @@
 @import "statements/index";
 @import "statements/new";
 @import "statements/show";
-@import "users/show";
-@import "pages/dashboard";
-
 
 @import "simple_discussion";
+.dash {
+  min-height: 100vh;
+}
 
 .container {
   min-height: 100vh;
