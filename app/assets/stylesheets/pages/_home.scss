@@ -6,8 +6,6 @@
   border-radius: 4px;
   background: #450D18;
   transition: background 0.3s ease;
-  // margin-left: 22%;
-  // margin-right: 15%;
 }
 
 .btn-flat p {
@@ -22,41 +20,37 @@ font-size: 20px;
 
 .help-button {
   width: 30vw;
-  margin-top: 60px;
 }
 
-.w3-container {
-
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 86vh;
-}
 
 .icon-schema {
-  width: 60%;
+  // width: 50%;
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  height: 25vh;
+  // align-items: center;
+  height: inherit;
   margin: 0 auto;
   padding-top: 5%;
   padding-bottom: 5%;
-
-  // border: solid;
-  // border-color: #18233A;
-  // border-width: 1px;
   border-radius: 7px;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-  rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+  rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 .icon-items {
   display: flex;
   align-items: center;
+  justify-content: space-around;
   flex-direction: column;
   max-width: 18%;
   padding-top: 8px;
+}
+
+.textonimg {
+  text-align: center;
+  margin-bottom: 46px;
+  padding-right: 45px;
+  padding-left: 45px;
 }
 
 .textonimg h2 {
@@ -66,12 +60,13 @@ font-size: 20px;
   font-weight: bolder;
 }
 
-.textonimg {
-  margin-top: 100px;
-  text-align: center;
-  margin-left: 15%;
-  margin-right: 15%;
+.textonimg h4 {
+  font-size: 24px;
+  color: black;
+  // padding: auto 3px;
+  font-weight: bolder;
 }
+
 
 .icons {
   font-size: 29px;
@@ -80,9 +75,8 @@ font-size: 20px;
 
 .undericon-text {
   text-align: center;
-  font-size: 20px;
-  color: #18233A;
-
+  font-size: 16px;
+  color: black;
 }
 
 a {
@@ -91,19 +85,31 @@ a {
 #photo1 {
   background-image: url('homepage2.jpg');
   background-size: cover;
-  height: 600px;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  border-radius: 10px 0 0 10px;
-  ;
+  height: 100%;
+  width: 40%;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+  rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+#photo2 {
+  background-image: url('helpful.jpg');
+  background-size: cover;
+  height: 85%;
+  width: 45%;
+  margin-left: 77px;
+  margin-bottom: 415px;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+  rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 .iconcontainer {
   height: 200px;
   align-items: center;
-  margin-top: 5%;
-  margin-bottom: 5%;
-
+  width: 45%;
+  margin-left: 60px;
+  margin-bottom: 140px;
 }
 
 @media(min-width: 1000px) {
@@ -117,8 +123,6 @@ a {
   padding: 20px;
   margin-top: 25px;
   margin-bottom: 25px;
-  // border: solid;
-  // border-width: 1px;
   border-radius: 7px;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
   rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
@@ -126,13 +130,10 @@ a {
 
 .signupcontainer {
   width: 35vw;
-  // height: 75vh;
   margin: auto;
   padding: 20px;
   margin-top: 25px;
   margin-bottom: 25px;
-  // border: solid;
-  // border-width: 1px;
   border-radius: 7px;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
   rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
@@ -153,10 +154,58 @@ a:hover {
 .columnflexing {
   display: flex;
   flex-direction: column;
-  // justify-content: center;
   align-items: center;
+  height: 100%;
+  width: 60%;
+  justify-content: center;
+  margin-right: 30px;
+  padding: 69px;
+  padding-bottom: 250px;
 }
 
 .columnflexing p {
   text-align: center;
+}
+
+.homerowflexbox {
+  display: flex;
+  align-items: center;
+  height: 50%;
+}
+
+.homerowflexbox2 {
+  display: flex;
+  align-items: center;
+  height: 50%;
+}
+
+.homepagefull {
+  height: 169vh;
+  margin-top: 30px;
+  margin-right: 60px;
+}
+
+.borderhome {
+//   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+//   rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+//   border-radius: 10px;
+//   height: 290px;
+//   width: 526px;
+//   position: absolute;
+//   top: 133px;
+//   left: 88px;
+// }
+}
+
+#photo3 {
+  background-image: url('helpful.jpg');
+  background-size: cover;
+  height: 100px;
+  width: 90vw;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+  rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  position: absolute;
+  bottom: -500px;
+  right: 60px;
 }
