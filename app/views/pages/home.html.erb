@@ -1,32 +1,31 @@
-
-<div class="w3-container">
-  <div class="row">
-    <div class="col-12 col-lg-7">
-      <div class="columnflexing">
+<div class="homepagefull">
+  <div class="homerowflexbox">
+    <div class="columnflexing">
         <div class="textonimg">
-          <h3>Whathever happened, we're here, We Care</h3>
+          <h4>Whathever happened, we're here, We Care</h4>
           <hr>
-          <h5>We care is the first website that helps victims and witnesses for any criminal case in Belgium. </h5>
+          <h5>We care is the first website that helps victims and witnesses for any criminal case in Belgium.</h5>
         </div>
 
         <div class="btn-flat help-button" data-controller="card-statement" data-action="click->card-statement#submitForm">
-        <%= simple_form_for(@statement, data:{card_statement_target:"form"}) do |f| %>
+          <%= simple_form_for(@statement, data:{card_statement_target:"form"}) do |f| %>
             <p>What can you do ?</p>
-        <% end %>
+          <% end %>
         </div>
-      </div>
-      <%# <%= link_to "Get Help", new_statement_path, class: "btn btn-flat help-button" %>
     </div>
-    <div class="col-12 col-lg-5">
-      <div id="photo1"></div>
-  </div>
-</div>
 
-<div class="iconcontainer">
+    <div id="photo1"></div>
+
+  </div>
+
+  <div class="homerowflexbox2">
+    <div id="photo2"></div>
+
+    <div class="iconcontainer">
       <div class="icon-schema">
         <div class="icon-items">
           <div class="icons">
-          <i class="far fa-edit"></i>
+            <i class="far fa-edit"></i>
           </div>
           <div class="undericon-text">
           Answer questions
@@ -51,9 +50,9 @@
           </div>
         </div>
       </div>
-</div>
+    </div>
 
-<%# <i class="fas fa-medkit"></i>
-<i class="fas fa-question"></i>
-<i class="far fa-edit"></i>
-<i class="fas fa-stopwatch"></i> %>
+  </div>
+  <div id="photo3">
+  </div>
+</div>

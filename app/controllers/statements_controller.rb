@@ -20,6 +20,7 @@ class StatementsController < ApplicationController
     end
     @first_aid_kits = @statement.answers.flat_map{|ans|  ans.possible_answer }.flat_map{|p_ans|  p_ans.firstaidkit_answers }.compact
     @specialists = @first_aid_kits.flat_map{|first_aid_kit | first_aid_kit.specialists}
+    @specialists.select! { |s| s.visibility} if !@specialists.nil? && !@specialists.empty?
     @markers = @specialists.map do |specialist|
       next if specialist.latitude.nil?
       {
