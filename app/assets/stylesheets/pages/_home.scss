@@ -22,19 +22,15 @@ font-size: 20px;
   width: 30vw;
 }
 
-
 .icon-schema {
   // width: 50%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   // align-items: center;
   height: inherit;
   margin: 0 auto;
   padding-top: 5%;
   padding-bottom: 5%;
-  border-radius: 7px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-  rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 .icon-items {
@@ -42,8 +38,9 @@ font-size: 20px;
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
-  max-width: 18%;
-  padding-top: 8px;
+  max-width: 31%;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .textonimg {
@@ -61,12 +58,16 @@ font-size: 20px;
 }
 
 .textonimg h4 {
-  font-size: 24px;
+  font-size: 26px;
   color: black;
   // padding: auto 3px;
   font-weight: bolder;
 }
 
+.textonimg h5 {
+  font-size: 16px;
+  color: black;
+}
 
 .icons {
   font-size: 29px;
@@ -83,33 +84,16 @@ a {
   color: #450D18;
 }
 #photo1 {
-  background-image: url('homepage2.jpg');
-  background-size: cover;
   height: 100%;
-  width: 40%;
-  border-radius: 10px 10px 10px 10px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-  rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-}
-
-#photo2 {
-  background-image: url('helpful.jpg');
-  background-size: cover;
-  height: 85%;
   width: 45%;
-  margin-left: 77px;
-  margin-bottom: 415px;
-  border-radius: 10px 10px 10px 10px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-  rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  background-size: contain;
 }
 
 .iconcontainer {
   height: 200px;
   align-items: center;
-  width: 45%;
-  margin-left: 60px;
-  margin-bottom: 140px;
+  flex-grow: 1;
+  margin-top: 66px;
 }
 
 @media(min-width: 1000px) {
@@ -158,9 +142,9 @@ a:hover {
   height: 100%;
   width: 60%;
   justify-content: center;
-  margin-right: 30px;
+  // margin-right: 30px;
   padding: 69px;
-  padding-bottom: 250px;
+  // padding-bottom: 250px;
 }
 
 .columnflexing p {
@@ -170,42 +154,5 @@ a:hover {
 .homerowflexbox {
   display: flex;
   align-items: center;
-  height: 50%;
-}
-
-.homerowflexbox2 {
-  display: flex;
-  align-items: center;
-  height: 50%;
-}
-
-.homepagefull {
-  height: 169vh;
-  margin-top: 30px;
-  margin-right: 60px;
-}
-
-.borderhome {
-//   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-//   rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-//   border-radius: 10px;
-//   height: 290px;
-//   width: 526px;
-//   position: absolute;
-//   top: 133px;
-//   left: 88px;
-// }
-}
-
-#photo3 {
-  background-image: url('helpful.jpg');
-  background-size: cover;
-  height: 100px;
-  width: 90vw;
-  border-radius: 10px 10px 10px 10px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-  rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-  position: absolute;
-  bottom: -500px;
-  right: 60px;
+  height: 84vh;
 }
