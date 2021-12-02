@@ -6,6 +6,7 @@
   border-radius: 4px;
   background: #450D18;
   transition: background 0.3s ease;
+  opacity: 1;
 }
 
 .btn-flat p {
@@ -16,6 +17,8 @@ font-size: 20px;
 .btn-flat:hover {
   background: #450D18;
   color: white;
+  opacity: 0.9;
+  cursor: pointer;
 }
 
 .help-button {
@@ -48,6 +51,7 @@ font-size: 20px;
   margin-bottom: 46px;
   padding-right: 45px;
   padding-left: 45px;
+  margin-top: 49px;
 }
 
 .textonimg h2 {
@@ -141,9 +145,10 @@ a:hover {
   align-items: center;
   height: 100%;
   width: 60%;
-  justify-content: center;
+  justify-content: space-around;
   // margin-right: 30px;
   padding: 69px;
+
   // padding-bottom: 250px;
 }
 
