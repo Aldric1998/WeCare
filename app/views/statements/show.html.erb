@@ -5,6 +5,9 @@
         <div class="colourfull"><h2>Sorry, we only have a Beta Version at the moment, we will quickly fix this issue!</h2></div>
         <img class="niceimg" src="https://cdn4.iconfinder.com/data/icons/avatar-basic-outline-doodle/91/Avatar__Basic_Doodle_05-1024.png" alt="Emoji being sorry">
         <h4>Thank you for your understanding!</h4>
+        <%= simple_form_for(Statement.new) do |f| %>
+              <%= button_tag "Solve your situation", class: "btn btn-default btn-flat nav-link white-link" %>
+        <% end %>
       </div>
       <% end %>
       <% @first_aid_kits.each do |kit| %>
