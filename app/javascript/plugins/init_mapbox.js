@@ -25,13 +25,13 @@ const initMapbox = () => {
     });
     fitMapToMarkers(map, markers);
 
-    setInterval(  () => { 
-      map.resize();
-      const bounds = new mapboxgl.LngLatBounds();
-      markers.forEach(marker => bounds.extend([marker.lng, marker.lat]));
-      map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 });
-    } 
-    , 1000);
+    // setInterval(  () => { 
+    //   map.resize();
+    //   const bounds = new mapboxgl.LngLatBounds();
+    //   markers.forEach(marker => bounds.extend([marker.lng, marker.lat]));
+    //   map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 });
+    // } 
+    // , 1000);
   };
 }
 export { initMapbox };
