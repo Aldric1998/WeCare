@@ -1,18 +1,20 @@
-<div class="signupcontainer">
-  <h1>Register as one of our specialists </h1>
-<hr>
+<div class="formbackground">
+  <div class="signupcontainerspec">
+    <h1>Register as one of our specialists </h1>
+  <hr>
 
-    <div class="form">
-      <%= simple_form_for(@specialist) do |f| %>
+      <div class="form">
+        <%= simple_form_for(@specialist) do |f| %>
 
-        <%= f.input :first_name %>
-        <%= f.input :last_name %>
-        <%= f.association :speciality, label_method: :name %>
-        <%= f.input :email %>
-        <%= f.input :address %>
-        <%= f.input :phonenumber %>
-        <%= f.input :picture, as: :file %>
-        <%= f.submit data: { confirm: "Our team will review your application and get back to you within 48 hours." } %>
-      <% end %>
-    </div>
+          <%= f.input :first_name %>
+          <%= f.input :last_name %>
+          <%= f.association :speciality, label_method: :name %>
+          <%= f.input :email %>
+          <%= f.input :address %>
+          <%= f.input :phonenumber %>
+          <%= f.input :picture, as: :file %>
+          <%= f.submit data: { confirm: "Our team will review your application and get back to you within 48 hours." } %>
+        <% end %>
+      </div>
+  </div>
 </div>
