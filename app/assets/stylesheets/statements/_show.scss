@@ -224,3 +224,18 @@ ul li{
 .mess img {
   width: 40px;
 }
+
+.niceimg {
+  border-radius: 8px;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  padding: 40px;
+}
+
+.flexboxup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

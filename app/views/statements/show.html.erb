@@ -1,6 +1,12 @@
 <div class="statement-controller" data-controller="btn-firstaidkit">
-
     <% if @current_question.nil? %>
+      <% if @first_aid_kits.empty?  %>
+      <div class="flexboxup">
+        <div class="colourfull"><h2>Sorry, we only have a Beta Version at the moment, we will quickly fix this issue!</h2></div>
+        <img class="niceimg" src="https://cdn4.iconfinder.com/data/icons/avatar-basic-outline-doodle/91/Avatar__Basic_Doodle_05-1024.png" alt="Emoji being sorry">
+        <h4>Thank you for your understanding!</h4>
+      </div>
+      <% end %>
       <% @first_aid_kits.each do |kit| %>
 
         <div class="toggling-btn">
