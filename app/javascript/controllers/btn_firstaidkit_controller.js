@@ -1,4 +1,5 @@
 import { Controller } from "stimulus"
+import { initMapbox } from '../plugins/init_mapbox';
 
 export default class extends Controller {
 
@@ -37,6 +38,7 @@ export default class extends Controller {
       this.contentTarget.classList.add("d-none")
       this.content2Target.classList.add("d-none")
     }
+    initMapbox()
   }
 
 }

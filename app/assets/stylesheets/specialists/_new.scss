@@ -1,4 +1,10 @@
-
+.formbackground {
+  background-image: linear-gradient(347deg, rgba(2, 0, 36, 0) 15%, rgba(0, 0, 0, 1) 100%),
+  url("specialistback.jpeg");
+  background-size: cover;
+  width: 100vw;
+  height: 138vh;
+}
 
 
 .form {
@@ -12,4 +18,19 @@
   font-size: 20px;
   color: #18233A;
   text-align: center;
+}
+
+.signupcontainerspec {
+  width: 35vw;
+  position: absolute;
+  left: 80px;
+  top: 93px;
+  padding: 20px;
+  background-color: whitesmoke;
+  opacity: 0.85;
+  // margin-top: 25px;
+  // margin-bottom: 25px;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }

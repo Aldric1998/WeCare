@@ -2,7 +2,11 @@
     <%= link_to specialist_path(specialist.id) do %>
       <div class ="cardcard">
         <div class="cardimgg">
-          <img src="https://cdn.icon-icons.com/icons2/1769/PNG/512/4092564-about-mobile-ui-profile-ui-user-website_114033.png">
+          <% if specialist.picture.attached? %>
+                  <%= cl_image_tag specialist.picture.key %>
+                <% else %>
+                  <img src="https://cdn.icon-icons.com/icons2/1769/PNG/512/4092564-about-mobile-ui-profile-ui-user-website_114033.png">
+              <% end %>
         </div>
         <div class="cardinfo">
           <div class="insideinfo">
@@ -12,7 +16,7 @@
             <%= specialist.speciality.name%>
           </div>
           <div class="insideinfo">
-            📍 <%= specialist.address %>
+            <%= specialist.address %>
           </div>
         </div>
       </div>

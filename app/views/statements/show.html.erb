@@ -1,6 +1,15 @@
 <div class="statement-controller" data-controller="btn-firstaidkit">
-
     <% if @current_question.nil? %>
+      <% if @first_aid_kits.empty?  %>
+      <div class="flexboxup">
+        <div class="colourfull"><h2>Sorry, we only have a Beta Version at the moment, we will quickly fix this issue!</h2></div>
+        <img class="niceimg" src="https://cdn4.iconfinder.com/data/icons/avatar-basic-outline-doodle/91/Avatar__Basic_Doodle_05-1024.png" alt="Emoji being sorry">
+        <h4>Thank you for your understanding!</h4>
+        <%= simple_form_for(Statement.new) do |f| %>
+              <%= button_tag "Solve your situation", class: "btn btn-default btn-flat nav-link white-link" %>
+        <% end %>
+      </div>
+      <% end %>
       <% @first_aid_kits.each do |kit| %>
 
         <div class="toggling-btn">
@@ -61,7 +70,7 @@
                   </div>
                   <div class="">
                     <div id="map"
-                            style="width: 300px; height: 670px; border-radius: 10px; box-shadow: 2px 2px 5px rgb(0 0 0 / 20%); margin: 10px; position: sticky; top: 80px; border: solid; border-width: 1px;"
+                            style="width: 35vw; height: 575px; border-radius: 10px; box-shadow: 2px 2px 5px rgb(0 0 0 / 20%); margin: 10px; position: sticky; top: 80px; border: solid; border-width: 1px;"
                             data-markers="<%= @markers.to_json %>"
                             data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
                     </div>
