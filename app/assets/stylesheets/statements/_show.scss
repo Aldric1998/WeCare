@@ -154,8 +154,8 @@ color: white ;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  margin-left: 51px;
-  width: 500px;
+
+  width: 560px;
 }
 
 .content {
@@ -168,9 +168,9 @@ color: white ;
 
 
 .pass-content {
-  width: 300px;
-  margin-left: 102px;
-  margin-top: 72px;
+  width: 332px;
+  margin-left: 113px;
+  margin-top: 98px;
 
 
   div {
@@ -186,16 +186,24 @@ ul{
   padding: 0;
 }
 
-ul li{
+ul li.him {
   display:inline-block;
   clear: both;
   padding: 20px;
   border-radius: 30px;
   margin-bottom: 2px;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 10px;
+  font-size: 12px;
 }
-
+ul li.me{
+  display:inline-block;
+  clear: both;
+  padding: 20px;
+  border-radius: 30px;
+  margin-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+}
 .him{
   background: #eee;
   float: left;
